@@ -1,0 +1,482 @@
+[
+  {
+    "id": "CHART_001",
+    "land": "chart",
+    "topic": "Bảng tần số",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Tần số của một giá trị trong mẫu số liệu là gì?",
+    "options": [
+      "Số lần giá trị đó xuất hiện trong mẫu",
+      "Giá trị lớn nhất của mẫu",
+      "Tổng các giá trị của mẫu",
+      "Số giá trị khác nhau của mẫu"
+    ],
+    "answer": "Số lần giá trị đó xuất hiện trong mẫu",
+    "explanation": "Tần số là số lần xuất hiện của một giá trị."
+  },
+  {
+    "id": "CHART_002",
+    "land": "chart",
+    "topic": "Tần số tương đối",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Tần số tương đối của một giá trị được tính bằng công thức nào?",
+    "options": [
+      "Tần số của giá trị đó chia cho cỡ mẫu",
+      "Cỡ mẫu chia cho tần số",
+      "Tần số nhân với cỡ mẫu",
+      "Giá trị đó chia cho cỡ mẫu"
+    ],
+    "answer": "Tần số của giá trị đó chia cho cỡ mẫu",
+    "explanation": "fᵢ = nᵢ : N (thường viết dưới dạng phần trăm)."
+  },
+  {
+    "id": "CHART_003",
+    "land": "chart",
+    "topic": "Tần số tương đối",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Tổng tất cả các tần số tương đối của một mẫu số liệu bằng bao nhiêu?",
+    "options": [
+      "100% (bằng 1)",
+      "50%",
+      "Bằng cỡ mẫu",
+      "Bằng 0"
+    ],
+    "answer": "100% (bằng 1)",
+    "explanation": "Các phần của toàn bộ mẫu cộng lại bằng toàn bộ mẫu, tức 100%."
+  },
+  {
+    "id": "CHART_004",
+    "land": "chart",
+    "topic": "Biểu đồ cột",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Loại biểu đồ nào dùng chiều cao các cột để so sánh số liệu giữa các nhóm?",
+    "options": [
+      "Biểu đồ cột",
+      "Biểu đồ đoạn thẳng",
+      "Biểu đồ tròn",
+      "Sơ đồ cây"
+    ],
+    "answer": "Biểu đồ cột",
+    "explanation": "Biểu đồ cột biểu diễn mỗi nhóm bằng một cột có chiều cao tương ứng với tần số hoặc giá trị."
+  },
+  {
+    "id": "CHART_005",
+    "land": "chart",
+    "topic": "Biểu đồ đoạn thẳng",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Biểu đồ đoạn thẳng thường dùng để biểu diễn điều gì?",
+    "options": [
+      "Sự thay đổi của số liệu theo thời gian",
+      "Tỉ lệ phần trăm của các phần trong tổng thể",
+      "Số học sinh của từng lớp",
+      "Giá trị lớn nhất của mẫu"
+    ],
+    "answer": "Sự thay đổi của số liệu theo thời gian",
+    "explanation": "Các đoạn thẳng nối các điểm cho thấy xu hướng tăng, giảm theo thời gian."
+  },
+  {
+    "id": "CHART_006",
+    "land": "chart",
+    "topic": "Biểu đồ tròn",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Biểu đồ tròn dùng để biểu diễn điều gì?",
+    "options": [
+      "Tỉ lệ phần trăm của từng phần so với tổng thể",
+      "Sự thay đổi theo thời gian",
+      "Giá trị lớn nhất và nhỏ nhất",
+      "Khoảng biến thiên"
+    ],
+    "answer": "Tỉ lệ phần trăm của từng phần so với tổng thể",
+    "explanation": "Mỗi hình quạt tương ứng với một phần của tổng thể."
+  },
+  {
+    "id": "CHART_007",
+    "land": "chart",
+    "topic": "Bảng tần số",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Tổng tất cả các tần số trong một bảng tần số bằng đại lượng nào?",
+    "options": [
+      "Cỡ mẫu (số giá trị của mẫu)",
+      "Giá trị lớn nhất",
+      "Trung bình cộng",
+      "Khoảng biến thiên"
+    ],
+    "answer": "Cỡ mẫu (số giá trị của mẫu)",
+    "explanation": "n₁ + n₂ + … = N."
+  },
+  {
+    "id": "CHART_008",
+    "land": "chart",
+    "topic": "Bảng tần số",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Bảng tần số: giá trị 1 có tần số 3, giá trị 2 có tần số 5, giá trị 3 có tần số 2. Cỡ mẫu là bao nhiêu?",
+    "options": [
+      "3",
+      "5",
+      "10",
+      "6"
+    ],
+    "answer": "10",
+    "explanation": "3 + 5 + 2 = 10."
+  },
+  {
+    "id": "CHART_009",
+    "land": "chart",
+    "topic": "Biểu đồ cột",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Trên biểu đồ cột biểu diễn khảo sát, trục ngang thường biểu diễn điều gì?",
+    "options": [
+      "Các nhóm (giá trị) của dữ liệu",
+      "Tần số",
+      "Cỡ mẫu",
+      "Phương sai"
+    ],
+    "answer": "Các nhóm (giá trị) của dữ liệu",
+    "explanation": "Trục ngang ghi các nhóm, trục đứng ghi tần số (hoặc tần số tương đối)."
+  },
+  {
+    "id": "CHART_010",
+    "land": "chart",
+    "topic": "Tần số tương đối",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Tần số tương đối 0,25 viết dưới dạng phần trăm là bao nhiêu?",
+    "options": [
+      "2,5%",
+      "25%",
+      "0,25%",
+      "250%"
+    ],
+    "answer": "25%",
+    "explanation": "0,25 = 25 : 100 = 25%."
+  },
+  {
+    "id": "CHART_011",
+    "land": "chart",
+    "topic": "Bảng tần số",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Bảng tần số điểm: điểm 5 có 4 bạn, điểm 6 có 6 bạn, điểm 7 có 8 bạn, điểm 8 có 2 bạn. Mốt của mẫu là bao nhiêu?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": "7",
+    "explanation": "Điểm 7 có tần số lớn nhất (8)."
+  },
+  {
+    "id": "CHART_012",
+    "land": "chart",
+    "topic": "Tần số tương đối",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Một giá trị có tần số 6 trong mẫu cỡ 24. Tần số tương đối của giá trị đó là bao nhiêu?",
+    "options": [
+      "6%",
+      "18%",
+      "25%",
+      "40%"
+    ],
+    "answer": "25%",
+    "explanation": "6 : 24 = 0,25 = 25%."
+  },
+  {
+    "id": "CHART_013",
+    "land": "chart",
+    "topic": "Biểu đồ cột",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Trên biểu đồ cột có trục đứng bắt đầu từ 0, cột A cao gấp đôi cột B. Điều đó có nghĩa là gì?",
+    "options": [
+      "Tần số của A gấp đôi tần số của B",
+      "Tần số của A bằng một nửa của B",
+      "Tần số của A nhiều hơn B đúng 2 đơn vị",
+      "Hai nhóm có tần số bằng nhau"
+    ],
+    "answer": "Tần số của A gấp đôi tần số của B",
+    "explanation": "Khi trục đứng bắt đầu từ 0, chiều cao cột tỉ lệ thuận với tần số."
+  },
+  {
+    "id": "CHART_014",
+    "land": "chart",
+    "topic": "Biểu đồ cột",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Vì sao biểu đồ cột có trục đứng không bắt đầu từ 0 có thể gây hiểu lầm?",
+    "options": [
+      "Làm sự chênh lệch giữa các cột trông lớn hơn thực tế",
+      "Làm các cột biến mất",
+      "Làm tổng tần số tăng",
+      "Làm biểu đồ trở thành biểu đồ tròn"
+    ],
+    "answer": "Làm sự chênh lệch giữa các cột trông lớn hơn thực tế",
+    "explanation": "Cắt bớt phần dưới của trục làm tỉ lệ giữa các cột bị méo."
+  },
+  {
+    "id": "CHART_015",
+    "land": "chart",
+    "topic": "Biểu đồ đoạn thẳng",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Để thể hiện doanh thu của một cửa hàng trong 12 tháng liên tiếp và theo dõi xu hướng tăng giảm, nên chọn biểu đồ nào?",
+    "options": [
+      "Biểu đồ đoạn thẳng",
+      "Biểu đồ tròn",
+      "Bảng tần số tương đối",
+      "Biểu đồ không cần trục"
+    ],
+    "answer": "Biểu đồ đoạn thẳng",
+    "explanation": "Dữ liệu theo thời gian phù hợp nhất với biểu đồ đoạn thẳng."
+  },
+  {
+    "id": "CHART_016",
+    "land": "chart",
+    "topic": "Tần số tương đối",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Lớp A có 20 học sinh và lớp B có 40 học sinh. Để so sánh tỉ lệ học sinh giỏi giữa hai lớp một cách công bằng, nên dùng đại lượng nào?",
+    "options": [
+      "Tần số tương đối",
+      "Tần số",
+      "Khoảng biến thiên",
+      "Giá trị lớn nhất"
+    ],
+    "answer": "Tần số tương đối",
+    "explanation": "Hai lớp có cỡ mẫu khác nhau nên phải so sánh theo tỉ lệ (tần số tương đối)."
+  },
+  {
+    "id": "CHART_017",
+    "land": "chart",
+    "topic": "Tần số tương đối",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Một bảng tần số tương đối có ba giá trị với tần số tương đối 20%, 50% và x%. Giá trị của x là bao nhiêu?",
+    "options": [
+      "20",
+      "30",
+      "70",
+      "80"
+    ],
+    "answer": "30",
+    "explanation": "Tổng bằng 100%: x = 100 − 20 − 50 = 30."
+  },
+  {
+    "id": "CHART_018",
+    "land": "chart",
+    "topic": "Biểu đồ tròn",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Trong biểu đồ tròn, phần chiếm 25% tương ứng với hình quạt có góc ở tâm bao nhiêu độ?",
+    "options": [
+      "25°",
+      "45°",
+      "90°",
+      "180°"
+    ],
+    "answer": "90°",
+    "explanation": "25% của 360° là 0,25 × 360° = 90°."
+  },
+  {
+    "id": "CHART_019",
+    "land": "chart",
+    "topic": "Biểu đồ cột",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Khảo sát môn học yêu thích của học sinh (Toán, Văn, Anh, …). Nên dùng biểu đồ nào để biểu diễn?",
+    "options": [
+      "Biểu đồ cột hoặc biểu đồ tròn",
+      "Biểu đồ đoạn thẳng nối các môn học theo thứ tự thời gian",
+      "Chỉ dùng phương sai",
+      "Không biểu diễn được"
+    ],
+    "answer": "Biểu đồ cột hoặc biểu đồ tròn",
+    "explanation": "Môn học là dữ liệu rời rạc (không theo thời gian), phù hợp với biểu đồ cột hoặc biểu đồ tròn."
+  },
+  {
+    "id": "CHART_020",
+    "land": "chart",
+    "topic": "Tần số tương đối",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Tần số tương đối của một giá trị bằng 0 có nghĩa là gì?",
+    "options": [
+      "Giá trị đó không xuất hiện trong mẫu",
+      "Giá trị đó xuất hiện nhiều nhất",
+      "Giá trị đó bằng 0",
+      "Mẫu số liệu không có giá trị nào"
+    ],
+    "answer": "Giá trị đó không xuất hiện trong mẫu",
+    "explanation": "Tần số tương đối bằng 0 khi tần số bằng 0."
+  },
+  {
+    "id": "CHART_021",
+    "land": "chart",
+    "topic": "Bảng tần số",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Mẫu số liệu: 3, 4, 4, 5, 5, 5, 6, 6, 6, 6. Tần số của giá trị 5 là bao nhiêu?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "3",
+    "explanation": "Giá trị 5 xuất hiện 3 lần."
+  },
+  {
+    "id": "CHART_022",
+    "land": "chart",
+    "topic": "Tần số tương đối",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Khảo sát 30 gia đình về số con: 0 con có 5 gia đình, 1 con có 12, 2 con có 10, 3 con có 3. Tần số tương đối của gia đình có 1 con là bao nhiêu?",
+    "options": [
+      "12%",
+      "30%",
+      "40%",
+      "60%"
+    ],
+    "answer": "40%",
+    "explanation": "12 : 30 = 0,4 = 40%."
+  },
+  {
+    "id": "CHART_023",
+    "land": "chart",
+    "topic": "Bảng tần số",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Bảng tần số: giá trị 1 có tần số 2, giá trị 2 có tần số 3, giá trị 3 có tần số 5. Số trung bình cộng của mẫu là bao nhiêu?",
+    "options": [
+      "2",
+      "2,3",
+      "2,5",
+      "3"
+    ],
+    "answer": "2,3",
+    "explanation": "(1·2 + 2·3 + 3·5) : 10 = 23 : 10 = 2,3."
+  },
+  {
+    "id": "CHART_024",
+    "land": "chart",
+    "topic": "Tần số tương đối",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Khảo sát 50 học sinh về cách đến trường: đi bộ 10 em, xe đạp 15 em, xe máy 20 em, xe buýt 5 em. Tỉ lệ phần trăm học sinh đi xe đạp là bao nhiêu?",
+    "options": [
+      "15%",
+      "20%",
+      "30%",
+      "40%"
+    ],
+    "answer": "30%",
+    "explanation": "15 : 50 = 0,3 = 30%."
+  },
+  {
+    "id": "CHART_025",
+    "land": "chart",
+    "topic": "Biểu đồ tròn",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Với khảo sát 50 học sinh ở trên (đi bộ 10, xe đạp 15, xe máy 20, xe buýt 5), góc ở tâm của hình quạt biểu diễn học sinh đi xe máy là bao nhiêu?",
+    "options": [
+      "72°",
+      "108°",
+      "144°",
+      "160°"
+    ],
+    "answer": "144°",
+    "explanation": "20 : 50 = 40%; 40% của 360° = 144°."
+  },
+  {
+    "id": "CHART_026",
+    "land": "chart",
+    "topic": "Tần số tương đối",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Một mẫu có ba giá trị với tần số 8, 12 và x. Tần số tương đối của giá trị đầu là 20%. Giá trị của x là bao nhiêu?",
+    "options": [
+      "10",
+      "20",
+      "24",
+      "32"
+    ],
+    "answer": "20",
+    "explanation": "8 : N = 0,2 nên N = 40. Vậy x = 40 − 8 − 12 = 20."
+  },
+  {
+    "id": "CHART_027",
+    "land": "chart",
+    "topic": "Tần số tương đối",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Lớp A (20 học sinh) có 10 em giỏi; lớp B (40 học sinh) có 16 em giỏi. Nhận xét nào đúng?",
+    "options": [
+      "Lớp A có tỉ lệ học sinh giỏi cao hơn lớp B",
+      "Lớp B có tỉ lệ học sinh giỏi cao hơn vì có nhiều em giỏi hơn",
+      "Hai lớp có tỉ lệ học sinh giỏi bằng nhau",
+      "Không thể so sánh hai lớp"
+    ],
+    "answer": "Lớp A có tỉ lệ học sinh giỏi cao hơn lớp B",
+    "explanation": "Lớp A: 10 : 20 = 50%. Lớp B: 16 : 40 = 40%."
+  },
+  {
+    "id": "CHART_028",
+    "land": "chart",
+    "topic": "Bảng tần số",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Bảng tần số: điểm 5 có 2 bạn, điểm 6 có 3 bạn, điểm 7 có 3 bạn, điểm 8 có 2 bạn. Trung vị của mẫu là bao nhiêu?",
+    "options": [
+      "6",
+      "6,5",
+      "7",
+      "7,5"
+    ],
+    "answer": "6,5",
+    "explanation": "Mẫu có 10 giá trị: 5, 5, 6, 6, 6, 7, 7, 7, 8, 8. Giá trị thứ 5 là 6 và thứ 6 là 7; trung vị = (6 + 7) : 2 = 6,5."
+  },
+  {
+    "id": "CHART_029",
+    "land": "chart",
+    "topic": "Biểu đồ đoạn thẳng",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Doanh thu (triệu đồng) 4 quý: quý 1 là 20, quý 2 là 24, quý 3 là 33, quý 4 là 30. Quý nào có doanh thu tăng nhiều nhất so với quý liền trước?",
+    "options": [
+      "Quý 2",
+      "Quý 3",
+      "Quý 4",
+      "Các quý tăng như nhau"
+    ],
+    "answer": "Quý 3",
+    "explanation": "Mức thay đổi: quý 2 tăng 4, quý 3 tăng 9, quý 4 giảm 3."
+  },
+  {
+    "id": "CHART_030",
+    "land": "chart",
+    "topic": "Tần số tương đối",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Bốn giá trị của một mẫu có tần số tương đối lần lượt là 0,10; 0,35; 0,40 và x. Giá trị của x là bao nhiêu?",
+    "options": [
+      "0,10",
+      "0,15",
+      "0,25",
+      "0,85"
+    ],
+    "answer": "0,15",
+    "explanation": "Tổng các tần số tương đối bằng 1: x = 1 − (0,10 + 0,35 + 0,40) = 0,15."
+  }
+]

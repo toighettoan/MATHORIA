@@ -1,0 +1,482 @@
+[
+  {
+    "id": "MEAN_001",
+    "land": "mean",
+    "topic": "Trung bình cộng",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Số trung bình cộng của 2, 4, 6 là bao nhiêu?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": "4",
+    "explanation": "(2 + 4 + 6) : 3 = 12 : 3 = 4."
+  },
+  {
+    "id": "MEAN_002",
+    "land": "mean",
+    "topic": "Trung vị",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Trung vị của mẫu số liệu đã sắp xếp 1, 3, 5, 7, 9 là bao nhiêu?",
+    "options": [
+      "3",
+      "5",
+      "7",
+      "9"
+    ],
+    "answer": "5",
+    "explanation": "Mẫu có 5 giá trị (số lẻ) nên trung vị là giá trị chính giữa, tức giá trị thứ 3, bằng 5."
+  },
+  {
+    "id": "MEAN_003",
+    "land": "mean",
+    "topic": "Mốt",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Mốt của mẫu số liệu 2, 3, 3, 4, 5, 3, 6 là bao nhiêu?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "6"
+    ],
+    "answer": "3",
+    "explanation": "Giá trị 3 xuất hiện 3 lần, nhiều nhất, nên mốt bằng 3."
+  },
+  {
+    "id": "MEAN_004",
+    "land": "mean",
+    "topic": "Trung bình cộng",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Số trung bình cộng của một mẫu số liệu bằng tổng các giá trị chia cho đại lượng nào?",
+    "options": [
+      "Số giá trị trong mẫu",
+      "Giá trị lớn nhất",
+      "Giá trị nhỏ nhất",
+      "Số giá trị khác nhau"
+    ],
+    "answer": "Số giá trị trong mẫu",
+    "explanation": "x̄ = (x₁ + x₂ + … + xₙ) : n, trong đó n là số giá trị của mẫu."
+  },
+  {
+    "id": "MEAN_005",
+    "land": "mean",
+    "topic": "Mốt",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Mốt của một mẫu số liệu là gì?",
+    "options": [
+      "Giá trị xuất hiện nhiều lần nhất",
+      "Giá trị lớn nhất",
+      "Giá trị ở chính giữa",
+      "Trung bình cộng của mẫu"
+    ],
+    "answer": "Giá trị xuất hiện nhiều lần nhất",
+    "explanation": "Mốt là giá trị có tần số lớn nhất trong mẫu."
+  },
+  {
+    "id": "MEAN_006",
+    "land": "mean",
+    "topic": "Trung vị",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Với mẫu số liệu có số phần tử lẻ và đã sắp xếp theo thứ tự, trung vị là giá trị nào?",
+    "options": [
+      "Giá trị ở chính giữa",
+      "Giá trị đầu tiên",
+      "Giá trị xuất hiện nhiều nhất",
+      "Trung bình cộng của mọi giá trị"
+    ],
+    "answer": "Giá trị ở chính giữa",
+    "explanation": "Khi n lẻ, trung vị là số hạng đứng ở vị trí chính giữa của mẫu đã sắp xếp."
+  },
+  {
+    "id": "MEAN_007",
+    "land": "mean",
+    "topic": "Trung bình cộng",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Số trung bình cộng của 10, 20, 30, 40 là bao nhiêu?",
+    "options": [
+      "20",
+      "25",
+      "30",
+      "100"
+    ],
+    "answer": "25",
+    "explanation": "(10 + 20 + 30 + 40) : 4 = 100 : 4 = 25."
+  },
+  {
+    "id": "MEAN_008",
+    "land": "mean",
+    "topic": "Trung vị",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Trước khi tìm trung vị, ta cần làm gì với mẫu số liệu?",
+    "options": [
+      "Sắp xếp các giá trị theo thứ tự tăng dần (hoặc giảm dần)",
+      "Cộng tất cả các giá trị",
+      "Tìm giá trị xuất hiện nhiều nhất",
+      "Bình phương các giá trị"
+    ],
+    "answer": "Sắp xếp các giá trị theo thứ tự tăng dần (hoặc giảm dần)",
+    "explanation": "Trung vị được xác định dựa trên vị trí, nên mẫu phải được sắp xếp trước."
+  },
+  {
+    "id": "MEAN_009",
+    "land": "mean",
+    "topic": "Mốt",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Mốt của mẫu số liệu 5, 5, 7, 7, 7, 9, 9 là bao nhiêu?",
+    "options": [
+      "5",
+      "7",
+      "9",
+      "Không có mốt"
+    ],
+    "answer": "7",
+    "explanation": "Giá trị 7 xuất hiện 3 lần, nhiều hơn 5 (2 lần) và 9 (2 lần)."
+  },
+  {
+    "id": "MEAN_010",
+    "land": "mean",
+    "topic": "Trung vị",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Trung vị của mẫu số liệu đã sắp xếp 4, 8, 12 là bao nhiêu?",
+    "options": [
+      "4",
+      "8",
+      "12",
+      "24"
+    ],
+    "answer": "8",
+    "explanation": "Mẫu có 3 giá trị, giá trị chính giữa là 8."
+  },
+  {
+    "id": "MEAN_011",
+    "land": "mean",
+    "topic": "Trung vị",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Trung vị của mẫu số liệu đã sắp xếp 2, 5, 7, 10 là bao nhiêu?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "6,5"
+    ],
+    "answer": "6",
+    "explanation": "Mẫu có 4 giá trị (số chẵn) nên trung vị là trung bình cộng của hai giá trị chính giữa: (5 + 7) : 2 = 6."
+  },
+  {
+    "id": "MEAN_012",
+    "land": "mean",
+    "topic": "Trung vị",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Mẫu số liệu 3, 4, 5, 6, 100 có một giá trị rất lớn bất thường. Đại lượng nào ít bị ảnh hưởng bởi giá trị đó nhất?",
+    "options": [
+      "Trung bình cộng",
+      "Trung vị",
+      "Tổng các giá trị",
+      "Giá trị lớn nhất"
+    ],
+    "answer": "Trung vị",
+    "explanation": "Trung vị chỉ phụ thuộc vào vị trí chính giữa (ở đây là 5), còn trung bình cộng bị kéo lên rất nhiều bởi số 100."
+  },
+  {
+    "id": "MEAN_013",
+    "land": "mean",
+    "topic": "Mốt",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Mẫu số liệu 2, 2, 5, 5, 7 có mốt là gì?",
+    "options": [
+      "2",
+      "5",
+      "2 và 5",
+      "7"
+    ],
+    "answer": "2 và 5",
+    "explanation": "Hai giá trị 2 và 5 cùng xuất hiện 2 lần (nhiều nhất), nên mẫu có hai mốt."
+  },
+  {
+    "id": "MEAN_014",
+    "land": "mean",
+    "topic": "Trung bình cộng",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Khi thêm vào mẫu số liệu một giá trị lớn hơn rất nhiều so với các giá trị còn lại, đại lượng nào thường thay đổi nhiều nhất?",
+    "options": [
+      "Số trung bình cộng",
+      "Mốt",
+      "Trung vị",
+      "Số giá trị của mẫu"
+    ],
+    "answer": "Số trung bình cộng",
+    "explanation": "Trung bình cộng dùng mọi giá trị trong mẫu nên bị giá trị ngoại lai kéo lệch rõ rệt."
+  },
+  {
+    "id": "MEAN_015",
+    "land": "mean",
+    "topic": "Trung bình cộng",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Trung bình cộng của 5 số là 8. Tổng của 5 số đó bằng bao nhiêu?",
+    "options": [
+      "13",
+      "40",
+      "8",
+      "45"
+    ],
+    "answer": "40",
+    "explanation": "Tổng = trung bình cộng × số giá trị = 8 × 5 = 40."
+  },
+  {
+    "id": "MEAN_016",
+    "land": "mean",
+    "topic": "Mốt",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Khảo sát màu sắc yêu thích của học sinh trong lớp (xanh, đỏ, vàng, …). Đại lượng đo xu hướng tập trung nào phù hợp nhất?",
+    "options": [
+      "Mốt",
+      "Trung bình cộng",
+      "Trung vị",
+      "Tổng"
+    ],
+    "answer": "Mốt",
+    "explanation": "Màu sắc là dữ liệu không phải số nên không tính được trung bình hay trung vị; chỉ có thể tìm màu được chọn nhiều nhất, đó là mốt."
+  },
+  {
+    "id": "MEAN_017",
+    "land": "mean",
+    "topic": "Trung bình cộng",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Trung bình cộng của 3 số là 6. Thêm số thứ tư bằng 10 thì trung bình cộng của 4 số là bao nhiêu?",
+    "options": [
+      "6",
+      "7",
+      "8",
+      "16"
+    ],
+    "answer": "7",
+    "explanation": "Tổng 3 số = 18. Tổng 4 số = 18 + 10 = 28. Trung bình = 28 : 4 = 7."
+  },
+  {
+    "id": "MEAN_018",
+    "land": "mean",
+    "topic": "Trung bình cộng",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Với mẫu số liệu 3, 5, 5, 8, 9, khẳng định nào sau đây đúng?",
+    "options": [
+      "Trung bình cộng lớn hơn trung vị",
+      "Trung bình cộng bằng mốt",
+      "Trung vị lớn hơn trung bình cộng",
+      "Mốt lớn hơn trung vị"
+    ],
+    "answer": "Trung bình cộng lớn hơn trung vị",
+    "explanation": "Trung bình cộng = 30 : 5 = 6; trung vị = 5; mốt = 5. Vậy trung bình cộng (6) lớn hơn trung vị (5)."
+  },
+  {
+    "id": "MEAN_019",
+    "land": "mean",
+    "topic": "Mốt",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Chủ cửa hàng giày muốn biết nên nhập nhiều nhất cỡ giày nào. Đại lượng nào hữu ích nhất cho quyết định này?",
+    "options": [
+      "Mốt",
+      "Trung bình cộng",
+      "Tổng các cỡ giày",
+      "Cỡ giày lớn nhất"
+    ],
+    "answer": "Mốt",
+    "explanation": "Cỡ giày được mua nhiều nhất chính là mốt của mẫu số liệu."
+  },
+  {
+    "id": "MEAN_020",
+    "land": "mean",
+    "topic": "Trung bình cộng",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Số trung bình cộng của mẫu số liệu 6, 8 là 7. Nhận xét nào sau đây đúng?",
+    "options": [
+      "Trung bình cộng không nhất thiết là một giá trị của mẫu",
+      "Trung bình cộng luôn là một giá trị của mẫu",
+      "Trung bình cộng luôn lớn hơn mọi giá trị của mẫu",
+      "Trung bình cộng luôn bằng trung vị"
+    ],
+    "answer": "Trung bình cộng không nhất thiết là một giá trị của mẫu",
+    "explanation": "Số 7 là trung bình cộng nhưng không có trong mẫu 6, 8."
+  },
+  {
+    "id": "MEAN_021",
+    "land": "mean",
+    "topic": "Trung bình cộng",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Điểm 5 bài kiểm tra của Lan là 7, 8, 6, 9, 10. Điểm trung bình của Lan là bao nhiêu?",
+    "options": [
+      "7",
+      "8",
+      "8,5",
+      "9"
+    ],
+    "answer": "8",
+    "explanation": "(7 + 8 + 6 + 9 + 10) : 5 = 40 : 5 = 8."
+  },
+  {
+    "id": "MEAN_022",
+    "land": "mean",
+    "topic": "Trung bình cộng",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Ba bài kiểm tra đầu của Nam có điểm trung bình là 7. Muốn điểm trung bình của 4 bài là 7,5 thì bài thứ tư phải đạt bao nhiêu điểm?",
+    "options": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answer": "9",
+    "explanation": "Tổng 4 bài cần có: 7,5 × 4 = 30. Tổng 3 bài đầu: 7 × 3 = 21. Bài thứ tư: 30 − 21 = 9."
+  },
+  {
+    "id": "MEAN_023",
+    "land": "mean",
+    "topic": "Trung vị",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Chiều cao (cm) của 6 bạn: 150, 155, 160, 165, 170, 175. Trung vị chiều cao là bao nhiêu?",
+    "options": [
+      "160",
+      "162,5",
+      "165",
+      "167,5"
+    ],
+    "answer": "162,5",
+    "explanation": "Mẫu có 6 giá trị nên trung vị là trung bình của hai giá trị giữa: (160 + 165) : 2 = 162,5."
+  },
+  {
+    "id": "MEAN_024",
+    "land": "mean",
+    "topic": "Trung vị",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Lương (triệu đồng) của 5 nhân viên: 8, 9, 8, 10, 45. Trung vị của mẫu là bao nhiêu?",
+    "options": [
+      "8",
+      "9",
+      "16",
+      "45"
+    ],
+    "answer": "9",
+    "explanation": "Sắp xếp: 8, 8, 9, 10, 45. Giá trị chính giữa là 9 (trung bình cộng là 16 bị số 45 kéo lên)."
+  },
+  {
+    "id": "MEAN_025",
+    "land": "mean",
+    "topic": "Mốt",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Số bàn thắng của một đội trong 8 trận: 1, 0, 2, 2, 1, 2, 3, 2. Mốt của mẫu số liệu là bao nhiêu?",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "answer": "2",
+    "explanation": "Giá trị 2 xuất hiện 4 lần, nhiều nhất."
+  },
+  {
+    "id": "MEAN_026",
+    "land": "mean",
+    "topic": "Trung bình cộng",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Bảng điểm của 10 học sinh: điểm 6 có 2 em, điểm 7 có 3 em, điểm 8 có 4 em, điểm 9 có 1 em. Điểm trung bình là bao nhiêu?",
+    "options": [
+      "7",
+      "7,4",
+      "7,5",
+      "8"
+    ],
+    "answer": "7,4",
+    "explanation": "(6·2 + 7·3 + 8·4 + 9·1) : 10 = (12 + 21 + 32 + 9) : 10 = 74 : 10 = 7,4."
+  },
+  {
+    "id": "MEAN_027",
+    "land": "mean",
+    "topic": "Trung bình cộng",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Lớp A có 20 học sinh với điểm trung bình 6; lớp B có 30 học sinh với điểm trung bình 8. Điểm trung bình của cả hai lớp là bao nhiêu?",
+    "options": [
+      "7",
+      "7,2",
+      "7,5",
+      "6,8"
+    ],
+    "answer": "7,2",
+    "explanation": "Tổng điểm = 20·6 + 30·8 = 120 + 240 = 360. Trung bình = 360 : 50 = 7,2 (không phải (6 + 8) : 2)."
+  },
+  {
+    "id": "MEAN_028",
+    "land": "mean",
+    "topic": "Trung bình cộng",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Nhiệt độ (°C) 7 ngày liên tiếp: 28, 30, 29, 31, 30, 32, 30. Nhiệt độ trung bình là bao nhiêu?",
+    "options": [
+      "29",
+      "30",
+      "31",
+      "32"
+    ],
+    "answer": "30",
+    "explanation": "Tổng = 210, 210 : 7 = 30."
+  },
+  {
+    "id": "MEAN_029",
+    "land": "mean",
+    "topic": "Trung bình cộng",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Một mẫu 5 số có trung bình cộng là 10. Nếu bỏ đi một số bằng 10 thì trung bình cộng của 4 số còn lại là bao nhiêu?",
+    "options": [
+      "8",
+      "9",
+      "10",
+      "12"
+    ],
+    "answer": "10",
+    "explanation": "Tổng 5 số = 50. Bỏ số 10, còn 40; 40 : 4 = 10."
+  },
+  {
+    "id": "MEAN_030",
+    "land": "mean",
+    "topic": "Trung vị",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Thời gian chạy (giây) của 6 bạn: 12, 7, 15, 9, 20, 11. Trung vị là bao nhiêu?",
+    "options": [
+      "11",
+      "11,5",
+      "12",
+      "12,5"
+    ],
+    "answer": "11,5",
+    "explanation": "Sắp xếp: 7, 9, 11, 12, 15, 20. Trung vị = (11 + 12) : 2 = 11,5."
+  }
+]

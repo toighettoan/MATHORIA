@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MATHORIA - Hành trình khám phá thế giới Thống kê và Xác suất">
+  <title>MATHORIA | STAT & PROB ADVENTURE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="MATHORIA trang chủ">
+      <span class="brand-mark">✦</span>
+      <span><strong>MATHORIA</strong><small>STAT & PROB ADVENTURE</small></span>
+    </a>
+    <nav class="top-nav">
+      <a href="#world">Thế giới</a>
+      <a href="#laboratory">Phòng thí nghiệm</a>
+      <a href="#achievements">Thành tích</a>
+    </nav>
+    <div class="player-chip"><span class="online-dot"></span> Nhà thám hiểm <strong id="crystalCount">0 ✧</strong></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">✧ THE MATHEMATICAL KINGDOM ✧</span>
+        <h1>Khám phá thế giới<br><span>Toán học kỳ thú.</span></h1>
+        <p>Du hành qua những vùng đất bí ẩn, thực hiện thí nghiệm và thu thập pha lê tri thức bằng sức mạnh của Thống kê và Xác suất.</p>
+        <a class="primary-button" href="#world">Bắt đầu hành trình <span>→</span></a>
+        <div class="hero-stats">
+          <div><strong>05</strong><small>Vùng đất</small></div>
+          <div><strong>02</strong><small>Lĩnh vực</small></div>
+          <div><strong>∞</strong><small>Khám phá</small></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Minh họa thế giới MATHORIA">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="planet">✦</div>
+        <div class="floating-crystal crystal-a">◆</div>
+        <div class="floating-crystal crystal-b">✧</div>
+        <div class="floating-crystal crystal-c">♦</div>
+        <div class="mini-island island-a"><span>📊</span></div>
+        <div class="mini-island island-b"><span>🎲</span></div>
+        <div class="mini-island island-c"><span>📈</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="world">
+      <div class="section-heading">
+        <div><span class="eyebrow">YOUR ADVENTURE BEGINS HERE</span><h2>Bản đồ <span>Mathoria</span></h2></div>
+        <p>Chọn một vùng đất để bắt đầu khám phá.</p>
+      </div>
+      <div class="map-shell">
+        <div class="map-decoration map-star star-one">✦</div>
+        <div class="map-decoration map-star star-two">✧</div>
+        <div class="map-decoration map-cloud cloud-one"></div>
+        <div class="map-decoration map-cloud cloud-two"></div>
+        <svg class="map-path" viewBox="0 0 900 430" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M125 260 C190 80 300 80 350 210 S520 360 570 210 S740 80 790 250" />
+        </svg>
+        <button class="island island-mean" data-land="mean"><span class="island-icon">🏰</span><b>Đảo Trung Bình</b><small>Thống kê · 01</small><i>✦</i></button>
+        <button class="island island-variation" data-land="variation"><span class="island-icon">🌿</span><b>Thung lũng Biến Thiên</b><small>Thống kê · 02</small><i>✦</i></button>
+        <button class="island island-chart" data-land="chart"><span class="island-icon">📊</span><b>Rừng Biểu Đồ</b><small>Thống kê · 03</small><i>✦</i></button>
+        <button class="island island-ocean" data-land="ocean"><span class="island-icon">🌊</span><b>Đại Dương Ngẫu Nhiên</b><small>Xác suất · 04</small><i>✦</i></button>
+        <button class="island island-castle" data-land="castle"><span class="island-icon">🔮</span><b>Lâu Đài Xác Suất</b><small>Thử thách cuối · 05</small><i>✦</i></button>
+        <div class="map-label">MATHORIA KINGDOM</div>
+      </div>
+    </section>
+
+    <section class="section lab-section" id="laboratory">
+      <div class="section-heading">
+        <div><span class="eyebrow">LEARN BY EXPERIMENTING</span><h2>Phòng thí nghiệm</h2></div>
+        <p>Thử nghiệm trực tiếp và quan sát Toán học thay đổi.</p>
+      </div>
+      <div class="lab-grid">
+        <article class="lab-card statistics-card">
+          <div class="lab-card-top"><span class="lab-icon">📈</span><span class="tag tag-purple">STATISTICS</span></div>
+          <h3>Phòng thí nghiệm Thống kê</h3>
+          <p>Nhập bộ dữ liệu, khám phá số trung bình cộng, trung vị và mốt.</p>
+          <label for="dataInput">Bộ dữ liệu (các số cách nhau bằng dấu phẩy)</label>
+          <input id="dataInput" type="text" value="6, 7, 7, 8, 8, 9, 10" autocomplete="off">
+          <button class="secondary-button" id="analyzeButton">Phân tích dữ liệu</button>
+          <p class="error-message" id="dataError" role="alert"></p>
+          <div class="result-grid">
+            <div><small>Trung bình</small><strong id="meanResult">—</strong></div>
+            <div><small>Trung vị</small><strong id="medianResult">—</strong></div>
+            <div><small>Mốt</small><strong id="modeResult">—</strong></div>
+            <div><small>Khoảng biến thiên</small><strong id="rangeResult">—</strong></div>
+          </div>
+          <div class="data-bars" id="dataBars" aria-label="Biểu diễn dữ liệu dạng cột"></div>
+        </article>
+
+        <article class="lab-card probability-card">
+          <div class="lab-card-top"><span class="lab-icon">🎲</span><span class="tag tag-blue">PROBABILITY</span></div>
+          <h3>Đại Dương Ngẫu Nhiên</h3>
+          <p>Thực hiện phép thử tung đồng xu và theo dõi tần suất thực nghiệm.</p>
+          <div class="coin-stage"><div class="coin" id="coin">?</div><div class="coin-caption" id="coinCaption">Sẵn sàng thử nghiệm</div></div>
+          <button class="secondary-button blue-button" id="tossButton">Tung đồng xu</button>
+          <div class="result-grid two-results">
+            <div><small>Số lần tung</small><strong id="tossCount">0</strong></div>
+            <div><small>Tần suất mặt ngửa</small><strong id="headsRate">0%</strong></div>
+          </div>
+          <div class="probability-track"><span id="headsTrack"></span></div>
+          <button class="text-button" id="resetToss">Đặt lại thí nghiệm</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section achievement-section" id="achievements">
+      <div class="section-heading">
+        <div><span class="eyebrow">YOUR PROGRESS</span><h2>Nhật ký nhà thám hiểm</h2></div>
+        <p>Mỗi khám phá là một bước tiến trên hành trình.</p>
+      </div>
+      <div class="achievement-panel">
+        <div class="achievement-emblem">✧</div>
+        <div class="achievement-copy"><h3>Hành trình tri thức</h3><p id="progressText">Bạn đã thu thập 0/5 pha lê vùng đất.</p><div class="progress-bar"><span id="progressBar"></span></div></div>
+        <div class="achievement-count"><strong id="progressCount">0/5</strong><small>PHA LÊ</small></div>
+      </div>
+      <div class="reset-progress-wrapper">
+        <button id="resetProgressButton" class="reset-progress-button">
+          <span>↻</span> Chơi lại từ đầu
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>✦ MATHORIA</span><p>Sản phẩm học tập tương tác về Thống kê và Xác suất.</p><small>Được phát triển bởi nhóm sinh viên · Phiên bản thử nghiệm</small></footer>
+
+  <!-- Lớp phủ "Khám phá Vùng Đất" khi bấm đảo -->
+  <div class="explore-overlay" id="exploreOverlay" aria-live="polite">
+    <div class="explore-text">✦ Khám phá Vùng Đất ✦</div>
+    <div class="explore-sub" id="exploreSub"></div>
+    <div class="explore-bar"><i></i></div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/statistics.js"></script>
+  <script src="js/probability.js"></script>
+  <script src="js/world.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/ai-context.js"></script>
+  <script src="js/ai-assistant.js"></script>
+</body>
+</html>

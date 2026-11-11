@@ -1,0 +1,8 @@
+
+# Environment variables - Bao ve API Key
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/

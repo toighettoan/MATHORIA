@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rừng Biểu Đồ · MATHORIA</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#08140f; --card:#0f2119; --line:rgba(110,231,183,.22);
+  --text:#e8fff4; --muted:#9dc2b0; --leaf:#10b981; --leaf2:#34d399; --cyan:#67e8f9; --amber2:#fbbf24;
+  --ok:#34d399; --bad:#fb7185;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Nunito",system-ui,sans-serif;color:var(--text);line-height:1.6;min-height:100vh;
+  background:radial-gradient(900px 500px at 50% -10%,#04785755,transparent),var(--bg)}
+a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--amber2);outline-offset:2px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;border-bottom:1px solid var(--line)}
+.brand{font-weight:800;letter-spacing:.04em}
+.chip{border:1px solid var(--line);border-radius:999px;padding:5px 14px;font-size:.85rem;color:var(--muted)}
+.chip b{color:var(--amber2)}
+header.hero{text-align:center;padding:42px 5vw 30px;background:linear-gradient(180deg,#064e3b99,transparent)}
+.badge{display:inline-block;background:#10b98122;color:var(--leaf2);border:1px solid #10b98166;border-radius:999px;padding:3px 14px;font-size:.8rem;font-weight:700;margin:8px 0 14px}
+h1{margin:0;font-size:clamp(2rem,5vw,3rem);font-weight:800}
+.sub{color:var(--muted);max-width:56ch;margin:10px auto 0}
+main{max-width:1000px;margin:0 auto;padding:10px 5vw 70px}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.tab{background:var(--card);border:1px solid var(--line);color:var(--text);border-radius:12px;padding:10px 18px;font:inherit;font-weight:700;cursor:pointer}
+.tab[aria-selected="true"]{background:linear-gradient(135deg,var(--leaf2),#059669);color:#03150e;border-color:transparent}
+.panel{display:none}.panel.on{display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.card h3{margin:0 0 6px;font-size:1.15rem}
+.kicker{color:var(--leaf2);font-size:.8rem;font-weight:700;margin-bottom:4px}
+.formula{background:#050e0a;border:1px dashed #34d39977;border-radius:12px;padding:12px 14px;margin:10px 0;color:var(--amber2);font-weight:700;text-align:center}
+.ex{border-left:3px solid var(--leaf);background:#ffffff0a;padding:9px 13px;border-radius:0 10px 10px 0;color:var(--muted);font-size:.95rem}
+.ex b{color:var(--text)}
+label{display:block;font-size:.9rem;color:var(--muted);margin-bottom:5px}
+select,input[type=text],textarea{width:100%;background:#050e0a;color:var(--text);border:1px solid var(--line);border-radius:12px;padding:11px 14px;font:inherit}
+textarea{min-height:130px;resize:vertical}
+.btn{background:linear-gradient(135deg,var(--leaf),#0d9488);color:#fff;border:0;border-radius:12px;padding:11px 18px;font:inherit;font-weight:800;cursor:pointer}
+.btn.alt{background:#133326;border:1px solid var(--line)}
+.btn:hover{filter:brightness(1.12)}
+.btn[aria-pressed="true"]{outline:2px solid var(--amber2)}
+.row-label{margin-top:14px;font-size:.85rem;font-weight:700;color:var(--muted)}
+.sample-box{margin-top:18px;padding:12px 14px 14px;border:1px dashed #fbbf2499;border-radius:14px;background:#fbbf240d}
+.sample-box .row-label{margin-top:0;color:var(--amber2)}
+.sample-btn{font:inherit;font-weight:700;font-size:.92rem;cursor:pointer;color:var(--amber2);background:transparent;border:1px dashed #fbbf24aa;border-radius:999px;padding:8px 16px}
+.sample-btn:hover{background:#fbbf2422;border-style:solid}
+.sample-msg{min-height:1.2em;margin-top:8px;font-size:.88rem;color:var(--leaf2)}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+canvas{width:100%;height:260px;background:#050e0a;border:1px solid var(--line);border-radius:14px;display:block}
+table{width:100%;border-collapse:collapse;margin-top:12px;font-size:.95rem}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+th{color:var(--leaf2)}
+td.n,th.n{text-align:right}
+.note{color:var(--muted);font-size:.92rem;margin-top:10px}
+.err{color:var(--bad);font-size:.9rem;min-height:1.2em;margin-top:6px}
+.q{margin-bottom:16px}.q p{margin:0 0 8px;font-weight:700}
+.fb{font-size:.9rem;margin-top:6px;min-height:1.2em}
+.fb.ok{color:var(--ok)}.fb.bad{color:var(--bad)}
+.secret{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;padding:14px;border:1px dashed #34d39977;border-radius:14px;background:#050e0a}
+.word{padding:4px 12px;border-radius:10px;background:#133326;color:#4b7565;font-weight:800;letter-spacing:.2em}
+.word.open{background:#34d3991f;color:var(--leaf2);letter-spacing:0}
+.result{margin-top:18px;padding:18px 20px;border-radius:16px;border:1px solid var(--line);display:none}
+.result.show{display:block}
+.result.win{background:#34d3991a;border-color:#34d39966}
+.result.lose{background:#fb71851a;border-color:#fb718566}
+.gem{font-size:2.4rem}
+@media (prefers-reduced-motion:no-preference){.gem.pop{animation:pop .7s ease}}
+@keyframes pop{0%{transform:scale(.3) rotate(-20deg)}70%{transform:scale(1.25)}100%{transform:scale(1)}}
+
+.math{font-family:"Cambria Math","STIX Two Math","Times New Roman",serif;font-style:italic;font-weight:500;font-size:1.35em;letter-spacing:.3px}
+.math sub{font-size:.65em;line-height:0}
+.math sup{font-size:.65em;line-height:0}
+.frac{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;margin:0 .35em;line-height:1.35}
+.frac>span:first-child{padding:0 .45em .12em;border-bottom:.09em solid currentColor}
+.frac>span:last-child{padding:.12em .45em 0}
+.formula-note{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:8px;font-size:15px;line-height:1.5}
+.formula-note li{padding-left:14px;border-left:3px solid rgba(255,255,255,.18)}
+.formula-note .math{font-size:1.15em;margin-right:4px}
+
+.mini{margin-top:12px;padding:14px 12px 10px;background:#050e0a;border:1px solid var(--line);border-radius:14px}
+.mbars{display:flex;align-items:flex-end;gap:10px;height:130px;padding:20px 6px 0;border-left:2px solid #34d39977;border-bottom:2px solid #34d39977}
+.mbars div{flex:1;border-radius:6px 6px 0 0;position:relative}
+.mbars div span{position:absolute;top:-18px;left:0;right:0;text-align:center;font-size:.75rem;font-weight:800;color:var(--text)}
+.mlabels{display:flex;gap:10px;padding:5px 6px 0;font-size:.72rem;color:var(--muted)}
+.mlabels span{flex:1;text-align:center}
+.mcap{font-size:.8rem;color:var(--muted);margin-top:8px;text-align:center}
+.mpie{width:124px;height:124px;border-radius:50%;margin:2px auto 10px;background:conic-gradient(#fbbf24 0 25%,#34d399 25% 60%,#38bdf8 60% 100%);box-shadow:0 0 0 4px #050e0a,0 0 0 5px var(--line)}
+.mleg{display:grid;gap:4px;font-size:.82rem;color:var(--muted)}
+.mleg i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:7px;vertical-align:-1px}
+.mini+.ex{margin-top:12px}
+.pick{display:grid;gap:8px;padding:12px}
+.pick div{display:flex;gap:10px;align-items:center;font-size:.92rem;color:var(--muted)}
+.pick b{color:var(--text)}
+.pick .arrow{color:var(--amber2);font-weight:800}
+</style>
+<!-- ===== Nút về bản đồ (đồng bộ với Thung Lũng Biến Thiên) ===== -->
+<style>
+  .back-map{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:9px 18px; border-radius:99px;
+    color:#fff !important; text-decoration:none !important;
+    font:800 15px/1.2 Nunito, system-ui, sans-serif;
+    background:rgba(255,255,255,.09);
+    border:1px solid rgba(255,255,255,.25);
+    backdrop-filter:blur(8px);
+    box-shadow:0 4px 16px rgba(0,0,0,.25);
+    transition:transform .2s, border-color .2s, background .2s;
+  }
+  .back-map:hover{ transform:translateY(-2px); border-color:#9be7ff; background:rgba(255,255,255,.15); }
+  .back-map:focus-visible{ outline:3px solid #ffd37a; outline-offset:3px; }
+  .back-map.floating{ position:fixed; top:16px; left:16px; z-index:50; }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var TARGET = "index.html#world";
+  var links = document.querySelectorAll('a[href*="index.html"]');
+  var btn = links[0];
+  if (!btn) {                       // không có link cũ thì tạo nút nổi ở góc trái
+    btn = document.createElement("a");
+    btn.className = "floating";
+    document.body.appendChild(btn);
+  }
+  for (var i = 1; i < links.length; i++) links[i].style.display = "none"; // ẩn link thừa
+  btn.href = TARGET;
+  btn.textContent = "← Về bản đồ";
+  btn.classList.add("back-map");
+});
+</script>
+</head>
+<body>
+<div class="top">
+  <span class="brand">MATHORIA</span>
+  <span class="chip">Nhà thám hiểm · <b id="gemCount">0</b> ✦</span>
+</div>
+
+<header class="hero">
+  <a href="index.html">← Quay lại bản đồ MATHORIA</a><br>
+  <span class="badge">VÙNG ĐẤT 03 · THỐNG KÊ</span>
+  <h1>📊 Rừng Biểu Đồ</h1>
+  <p class="sub">Mỗi cây trong rừng là một biểu đồ. Hãy biết cách vẽ, cách đọc và giải mã thông điệp ẩn sau những con số.</p>
+</header>
+
+<main>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-tab="lib">📚 Thư viện kiến thức</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="lab">🌳 Xưởng biểu đồ</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="quiz">🔐 Giải mã thông điệp</button>
+  </div>
+
+  <section class="panel on" id="lib">
+    <div class="grid">
+      <article class="card">
+        <div class="kicker">Bài học 1</div><h3>Bảng tần số</h3>
+        <p>Tần số của một giá trị là số lần giá trị đó xuất hiện. Tần số tương đối là tỉ lệ của tần số so với tổng số dữ liệu, thường viết dưới dạng phần trăm.</p>
+        <div class="formula"><span class="math">f<sub>i</sub> = <span class="frac"><span>n<sub>i</sub></span><span>N</span></span></span></div>
+        <ul class="formula-note">
+          <li><span class="math">f<sub>i</sub></span>: Tần số tương đối của giá trị (hoặc nhóm) thứ i.</li>
+          <li><span class="math">n<sub>i</sub></span>: Tần số của giá trị thứ i, tức số lần giá trị đó xuất hiện.</li>
+          <li><span class="math">N</span>: Tổng số dữ liệu (cỡ mẫu).</li>
+          <li>Muốn viết dưới dạng phần trăm, bạn nhân kết quả với 100%.</li>
+        </ul>
+        <div class="ex"><b>Ví dụ:</b> Lớp có 40 bạn, 10 bạn thích bóng đá. Tần số tương đối là 10/40 = 25%.</div>
+      </article>
+      <article class="card">
+        <div class="kicker">Bài học 2</div><h3>Biểu đồ cột</h3>
+        <p>Mỗi cột đại diện cho một nhóm, chiều cao cột cho biết tần số. Biểu đồ cột giúp so sánh nhanh giữa các nhóm rời rạc.</p>
+        <div class="mini" role="img" aria-label="Biểu đồ cột minh hoạ điểm 5 môn học"><div class="mbars"><div style="height:100.0%;background:#34d399"><span>12</span></div><div style="height:50.0%;background:#38bdf8"><span>6</span></div><div style="height:75.0%;background:#fbbf24"><span>9</span></div><div style="height:66.7%;background:#f472b6"><span>8</span></div><div style="height:41.7%;background:#a78bfa"><span>5</span></div></div><div class="mlabels"><span>Toán</span><span>Văn</span><span>Anh</span><span>Tin</span><span>T.dục</span></div><div class="mcap">Trục ngang: môn học · Trục đứng: số bạn yêu thích</div></div>
+        <div class="ex"><b>Mẹo đọc:</b> Nhìn tên trục ngang, đơn vị trục đứng, rồi mới so sánh chiều cao các cột.</div>
+      </article>
+      <article class="card">
+        <div class="kicker">Bài học 3</div><h3>Biểu đồ đường</h3>
+        <p>Nối các điểm dữ liệu theo thứ tự, thích hợp để theo dõi sự thay đổi theo thời gian: tăng, giảm hay giữ nguyên.</p>
+        <div class="mini"><svg viewBox="0 0 220 114" width="100%" role="img" aria-label="Biểu đồ đường nhiệt độ tăng dần từ tháng 1 đến tháng 5 rồi giảm nhẹ ở tháng 6"><line x1="12" y1="92" x2="212" y2="92" stroke="#34d39977" stroke-width="1.5"/><polyline points="20,76.0 56,66.7 92,52.7 128,38.7 164,29.3 200,34.0" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linejoin="round"/><circle cx="20" cy="76.0" r="4" fill="#fbbf24"/><text x="20" y="67.0" text-anchor="middle" font-size="10" font-weight="700" fill="#e8fff4">21</text><circle cx="56" cy="66.7" r="4" fill="#fbbf24"/><text x="56" y="57.7" text-anchor="middle" font-size="10" font-weight="700" fill="#e8fff4">23</text><circle cx="92" cy="52.7" r="4" fill="#fbbf24"/><text x="92" y="43.7" text-anchor="middle" font-size="10" font-weight="700" fill="#e8fff4">26</text><circle cx="128" cy="38.7" r="4" fill="#fbbf24"/><text x="128" y="29.7" text-anchor="middle" font-size="10" font-weight="700" fill="#e8fff4">29</text><circle cx="164" cy="29.3" r="4" fill="#fbbf24"/><text x="164" y="20.3" text-anchor="middle" font-size="10" font-weight="700" fill="#e8fff4">31</text><circle cx="200" cy="34.0" r="4" fill="#fbbf24"/><text x="200" y="25.0" text-anchor="middle" font-size="10" font-weight="700" fill="#e8fff4">30</text><text x="20" y="108" text-anchor="middle" font-size="9" fill="#9dc2b0">T1</text><text x="56" y="108" text-anchor="middle" font-size="9" fill="#9dc2b0">T2</text><text x="92" y="108" text-anchor="middle" font-size="9" fill="#9dc2b0">T3</text><text x="128" y="108" text-anchor="middle" font-size="9" fill="#9dc2b0">T4</text><text x="164" y="108" text-anchor="middle" font-size="9" fill="#9dc2b0">T5</text><text x="200" y="108" text-anchor="middle" font-size="9" fill="#9dc2b0">T6</text></svg><div class="mcap">Nhiệt độ (°C) tăng dần, tháng 6 giảm nhẹ</div></div>
+        <div class="ex"><b>Ví dụ:</b> Nhiệt độ trung bình 12 tháng trong năm, số học sinh vắng mỗi tuần.</div>
+      </article>
+      <article class="card">
+        <div class="kicker">Bài học 4</div><h3>Biểu đồ tròn</h3>
+        <p>Cả hình tròn là 100% dữ liệu, mỗi hình quạt là một phần. Quạt càng lớn thì tỉ lệ càng cao.</p>
+        <div class="formula">Góc hình quạt = tần số tương đối × 360°</div>
+        <div class="mini"><div class="mpie" role="img" aria-label="Biểu đồ tròn: bóng đá 25%, bóng rổ 35%, cầu lông 40%"></div><div class="mleg"><span><i style="background:#fbbf24"></i>Bóng đá: 25% → 90°</span><span><i style="background:#34d399"></i>Bóng rổ: 35% → 126°</span><span><i style="background:#38bdf8"></i>Cầu lông: 40% → 144°</span></div></div>
+        <div class="ex"><b>Ví dụ:</b> Một nhóm chiếm 25% thì hình quạt có góc 90°.</div>
+      </article>
+      <article class="card">
+        <div class="kicker">Ứng dụng thực tế</div><h3>Chọn biểu đồ nào?</h3>
+        <p>So sánh các nhóm: biểu đồ cột. Xem xu hướng theo thời gian: biểu đồ đường. Xem mỗi phần chiếm bao nhiêu trong tổng: biểu đồ tròn.</p>
+        <div class="mini pick"><div><span>📊</span><b>So sánh các nhóm</b><span class="arrow">→</span>biểu đồ cột</div><div><span>📈</span><b>Xu hướng theo thời gian</b><span class="arrow">→</span>biểu đồ đường</div><div><span>🥧</span><b>Tỉ lệ trong tổng</b><span class="arrow">→</span>biểu đồ tròn</div></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel" id="lab">
+    <div class="grid">
+      <div class="card">
+        <h3>🌳 Nhập dữ liệu của bạn</h3>
+        <label for="data">Mỗi dòng một nhóm, viết dạng "Tên: số"</label>
+        <textarea id="data" spellcheck="false"></textarea>
+        <div class="err" id="err"></div>
+        <div class="row-label">📊 Chọn loại biểu đồ</div>
+        <div class="row" id="types">
+          <button class="btn" data-type="bar" aria-pressed="true">Biểu đồ cột</button>
+          <button class="btn alt" data-type="line" aria-pressed="false">Biểu đồ đường</button>
+          <button class="btn alt" data-type="pie" aria-pressed="false">Biểu đồ tròn</button>
+        </div>
+        <div class="sample-box">
+          <div class="row-label">📥 Nạp dữ liệu mẫu vào ô nhập</div>
+          <div class="row sample-row">
+            <button class="sample-btn" data-sample="0"><span aria-hidden="true">📥</span> Môn học yêu thích</button>
+            <button class="sample-btn" data-sample="1"><span aria-hidden="true">📥</span> Nhiệt độ theo tháng</button>
+          </div>
+          <div class="sample-msg" id="sampleMsg" aria-live="polite"></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>📈 Biểu đồ và bảng tần số</h3>
+        <canvas id="chart" aria-label="Biểu đồ dữ liệu"></canvas>
+        <table id="table"></table>
+        <p class="note" id="insight"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="quiz">
+    <div class="card">
+      <h3>🔐 Thông điệp ẩn trong rừng</h3>
+      <p class="note">Mỗi câu trả lời đúng sẽ mở một phần thông điệp. Mở đủ 3 phần (đúng cả 3 câu) để nhận pha lê.</p>
+      <div class="secret" id="secret"></div>
+      <div id="quizMount"></div>
+    </div>
+  </section>
+</main>
+
+<script src="data/questions-bundle.js"></script>
+<script src="js/quiz-engine.js"></script>
+<script src="js/quiz-widget.js"></script>
+<script>
+/* ===== Pha lê: chỉnh 2 dòng này cho khớp cách lưu của các đảo khác ===== */
+const STORE_KEY='mathoria-completed-lands';
+const ISLAND_ID='chart';
+function getGems(){try{const v=JSON.parse(localStorage.getItem(STORE_KEY));return Array.isArray(v)?v:[];}catch(e){return [];}}
+function awardGem(){const g=getGems();if(!g.includes(ISLAND_ID)){g.push(ISLAND_ID);try{localStorage.setItem(STORE_KEY,JSON.stringify(g));}catch(e){}}showGems();}
+function showGems(){document.getElementById('gemCount').textContent=getGems().length;}
+showGems();
+const $=id=>document.getElementById(id);
+
+/* ===== Vẽ biểu đồ ===== */
+const COLORS=['#34d399','#38bdf8','#fbbf24','#f472b6','#a78bfa','#fb923c','#2dd4bf','#f87171','#a3e635','#60a5fa'];
+function drawChart(canvas,labels,vals,type){
+  const dpr=window.devicePixelRatio||1,w=canvas.clientWidth,h=canvas.clientHeight;
+  if(!w)return;
+  canvas.width=w*dpr;canvas.height=h*dpr;
+  const x=canvas.getContext('2d');x.scale(dpr,dpr);x.clearRect(0,0,w,h);
+  x.font='12px Nunito, sans-serif';x.textAlign='center';
+  if(!vals.length){x.fillStyle='#9dc2b0';x.fillText('Chưa có dữ liệu hợp lệ',w/2,h/2);return;}
+  const n=vals.length,sum=vals.reduce((a,b)=>a+b,0);
+  if(type==='pie'){
+    const cx=Math.min(w*0.32,h/2),cy=h/2,r=Math.min(cx,h/2)-14;
+    let a0=-Math.PI/2;
+    vals.forEach((v,i)=>{
+      const a1=a0+v/sum*2*Math.PI;
+      x.fillStyle=COLORS[i%COLORS.length];x.beginPath();x.moveTo(cx,cy);x.arc(cx,cy,r,a0,a1);x.closePath();x.fill();
+      x.strokeStyle='#050e0a';x.lineWidth=2;x.stroke();a0=a1;
+    });
+    x.textAlign='left';
+    labels.forEach((l,i)=>{
+      const ly=18+i*20; if(ly>h-6)return;
+      x.fillStyle=COLORS[i%COLORS.length];x.fillRect(cx*2+24,ly-10,12,12);
+      x.fillStyle='#e8fff4';x.fillText(l+' ('+(vals[i]/sum*100).toFixed(1)+'%)',cx*2+42,ly);
+    });
+    return;
+  }
+  const L=40,R=12,T=22,B=34,pw=w-L-R,ph=h-T-B,max=Math.max(...vals)*1.15||1;
+  x.strokeStyle='#ffffff1f';x.fillStyle='#9dc2b0';x.textAlign='right';
+  for(let i=0;i<=4;i++){const y=T+ph*i/4;x.beginPath();x.moveTo(L,y);x.lineTo(w-R,y);x.stroke();x.fillText(String(Math.round(max*(1-i/4)*10)/10).replace('.',','),L-6,y+4);}
+  x.textAlign='center';
+  const step=pw/n;
+  const short=s=>s.length>10&&n>5?s.slice(0,9)+'…':s;
+  if(type==='bar'){
+    vals.forEach((v,i)=>{
+      const bh=ph*v/max,bx=L+step*i+step*0.18,bw=step*0.64;
+      x.fillStyle=COLORS[i%COLORS.length];x.fillRect(bx,T+ph-bh,bw,bh);
+      x.fillStyle='#e8fff4';x.fillText(String(v).replace('.',','),bx+bw/2,T+ph-bh-5);
+      x.fillStyle='#9dc2b0';x.fillText(short(labels[i]),bx+bw/2,h-12);
+    });
+  }else{
+    x.strokeStyle='#34d399';x.lineWidth=2.5;x.beginPath();
+    vals.forEach((v,i)=>{const px=L+step*i+step/2,py=T+ph*(1-v/max);i?x.lineTo(px,py):x.moveTo(px,py);});x.stroke();
+    vals.forEach((v,i)=>{
+      const px=L+step*i+step/2,py=T+ph*(1-v/max);
+      x.fillStyle='#fbbf24';x.beginPath();x.arc(px,py,4.5,0,7);x.fill();
+      x.fillStyle='#e8fff4';x.fillText(String(v).replace('.',','),px,py-10);
+      x.fillStyle='#9dc2b0';x.fillText(short(labels[i]),px,h-12);
+    });
+  }
+}
+
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected',x===t));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===t.dataset.tab));
+  refresh();
+}));
+
+/* ===== Xưởng biểu đồ ===== */
+const SAMPLES=[
+  'Toán: 12\nVăn: 6\nAnh: 9\nTin học: 8\nThể dục: 5',
+  'Tháng 1: 21\nTháng 2: 23\nTháng 3: 26\nTháng 4: 29\nTháng 5: 31\nTháng 6: 30'
+];
+let type='bar';
+$('data').value=SAMPLES[0];
+function parseData(){
+  const labels=[],vals=[];let bad=0;
+  $('data').value.split(/\n/).forEach(line=>{
+    line=line.trim();if(!line)return;
+    const m=line.match(/^(.+?)\s*[:=]\s*(-?[\d.,]+)$/);
+    if(!m){bad++;return;}
+    const v=parseFloat(m[2].replace(',','.'));
+    if(isNaN(v)||v<0){bad++;return;}
+    labels.push(m[1]);vals.push(v);
+  });
+  $('err').textContent=bad?`Có ${bad} dòng chưa đúng dạng "Tên: số" (số không âm), mình đã bỏ qua.`:'';
+  return {labels:labels.slice(0,10),vals:vals.slice(0,10)};
+}
+function fmt(v){return String(Math.round(v*100)/100).replace('.',',');}
+function renderLab(){
+  const {labels,vals}=parseData();
+  drawChart($('chart'),labels,vals,type);
+  const sum=vals.reduce((a,b)=>a+b,0);
+  $('table').innerHTML='<tr><th>Nhóm</th><th class="n">Tần số</th><th class="n">Tần số tương đối</th></tr>'+
+    labels.map((l,i)=>`<tr><td>${l.replace(/</g,'&lt;')}</td><td class="n">${fmt(vals[i])}</td><td class="n">${sum?(vals[i]/sum*100).toFixed(1).replace('.',','):0}%</td></tr>`).join('')+
+    (vals.length?`<tr><th>Tổng</th><th class="n">${fmt(sum)}</th><th class="n">100%</th></tr>`:'');
+  if(vals.length){
+    const mx=vals.indexOf(Math.max(...vals)),mn=vals.indexOf(Math.min(...vals));
+    $('insight').textContent=`Cao nhất: ${labels[mx]} (${fmt(vals[mx])}). Thấp nhất: ${labels[mn]} (${fmt(vals[mn])}). Chênh lệch giữa hai nhóm này là ${fmt(vals[mx]-vals[mn])}.`;
+  }else $('insight').textContent='Nhập ít nhất một dòng dữ liệu để vẽ biểu đồ.';
+}
+$('data').addEventListener('input',renderLab);
+document.querySelectorAll('[data-type]').forEach(b=>b.addEventListener('click',()=>{
+  type=b.dataset.type;
+  document.querySelectorAll('[data-type]').forEach(x=>{x.setAttribute('aria-pressed',x===b);x.classList.toggle('alt',x!==b);});
+  renderLab();
+}));
+document.querySelectorAll('[data-sample]').forEach(b=>b.addEventListener('click',()=>{
+  const i=+b.dataset.sample;$('data').value=SAMPLES[i];$('sampleMsg').textContent='✓ Đã nạp dữ liệu mẫu: '+(i===1?'nhiệt độ theo tháng':'môn học yêu thích')+'.';
+  type=i===1?'line':'bar';
+  document.querySelectorAll('[data-type]').forEach(x=>{const on=x.dataset.type===type;x.setAttribute('aria-pressed',on);x.classList.toggle('alt',!on);});
+  renderLab();
+}));
+
+/* ===== Thử thách (câu hỏi random từ ngân hàng 30 câu) ===== */
+const MSG=['Mỗi cột','kể một','câu chuyện'];
+function resetWords(){
+  $('secret').innerHTML=MSG.map((m,i)=>`<span class="word" id="w${i}">${'?'.repeat(m.length)}</span>`).join('');
+}
+resetWords();
+MathoriaQuizWidget.mount({
+  container:'#quizMount',
+  land:'chart',
+  alreadyEarned:()=>getGems().includes(ISLAND_ID),
+  passMessage:'Thông điệp được giải mã: “Mỗi cột kể một câu chuyện”. Bạn nhận được pha lê của Rừng Biểu Đồ.',
+  onRoundStart:resetWords,
+  onAnswer:(i,good)=>{ if(good){const w=$('w'+i);w.textContent=MSG[i];w.classList.add('open');} },
+  onPass:awardGem,
+  theme:{card:'rgba(255,255,255,.05)',onAccent:'#ffffff',text:'var(--text)',muted:'var(--muted)',line:'var(--line)',accent:'var(--leaf)',accent2:'#0d9488',ok:'var(--ok)',bad:'var(--bad)',gold:'var(--amber2)'}
+});
+
+function refresh(){renderLab();}
+window.addEventListener('resize',refresh);
+refresh();
+</script>
+  <script src="js/ai-context.js"></script>
+  <script src="js/ai-assistant.js"></script>
+</body>
+</html>

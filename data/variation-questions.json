@@ -1,0 +1,482 @@
+[
+  {
+    "id": "VAR_001",
+    "land": "variation",
+    "topic": "Khoảng biến thiên",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Khoảng biến thiên của mẫu số liệu được tính bằng công thức nào?",
+    "options": [
+      "Giá trị lớn nhất − giá trị nhỏ nhất",
+      "Giá trị lớn nhất + giá trị nhỏ nhất",
+      "Trung bình cộng − giá trị nhỏ nhất",
+      "(Giá trị lớn nhất + giá trị nhỏ nhất) : 2"
+    ],
+    "answer": "Giá trị lớn nhất − giá trị nhỏ nhất",
+    "explanation": "R = x_max − x_min."
+  },
+  {
+    "id": "VAR_002",
+    "land": "variation",
+    "topic": "Khoảng biến thiên",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Khoảng biến thiên của mẫu số liệu 3, 7, 10, 15 là bao nhiêu?",
+    "options": [
+      "10",
+      "12",
+      "15",
+      "18"
+    ],
+    "answer": "12",
+    "explanation": "R = 15 − 3 = 12."
+  },
+  {
+    "id": "VAR_003",
+    "land": "variation",
+    "topic": "Độ lệch chuẩn",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Độ lệch chuẩn của một mẫu số liệu là gì?",
+    "options": [
+      "Căn bậc hai của phương sai",
+      "Bình phương của phương sai",
+      "Hai lần phương sai",
+      "Tổng các giá trị của mẫu"
+    ],
+    "answer": "Căn bậc hai của phương sai",
+    "explanation": "s = √(s²)."
+  },
+  {
+    "id": "VAR_004",
+    "land": "variation",
+    "topic": "Phương sai",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Phương sai của mẫu số liệu dùng để đo điều gì?",
+    "options": [
+      "Mức độ phân tán của số liệu quanh số trung bình",
+      "Giá trị xuất hiện nhiều nhất",
+      "Giá trị ở chính giữa mẫu",
+      "Số lượng giá trị của mẫu"
+    ],
+    "answer": "Mức độ phân tán của số liệu quanh số trung bình",
+    "explanation": "Phương sai càng lớn thì các giá trị càng cách xa số trung bình."
+  },
+  {
+    "id": "VAR_005",
+    "land": "variation",
+    "topic": "Độ lệch chuẩn",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Mẫu số liệu có tất cả các giá trị bằng nhau thì độ lệch chuẩn bằng bao nhiêu?",
+    "options": [
+      "0",
+      "1",
+      "Bằng giá trị đó",
+      "Không xác định"
+    ],
+    "answer": "0",
+    "explanation": "Mọi độ lệch so với trung bình đều bằng 0 nên phương sai và độ lệch chuẩn đều bằng 0."
+  },
+  {
+    "id": "VAR_006",
+    "land": "variation",
+    "topic": "Phương sai",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Phương sai của một mẫu số liệu luôn có tính chất nào sau đây?",
+    "options": [
+      "Không âm",
+      "Luôn âm",
+      "Luôn bằng 1",
+      "Luôn lớn hơn trung bình cộng"
+    ],
+    "answer": "Không âm",
+    "explanation": "Phương sai là trung bình của các bình phương nên luôn ≥ 0."
+  },
+  {
+    "id": "VAR_007",
+    "land": "variation",
+    "topic": "Độ lệch chuẩn",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Độ lệch chuẩn càng lớn thì các giá trị của mẫu số liệu như thế nào?",
+    "options": [
+      "Càng phân tán",
+      "Càng tập trung",
+      "Càng bằng nhau",
+      "Càng nhỏ"
+    ],
+    "answer": "Càng phân tán",
+    "explanation": "Độ lệch chuẩn lớn nghĩa là dữ liệu trải rộng quanh số trung bình."
+  },
+  {
+    "id": "VAR_008",
+    "land": "variation",
+    "topic": "Khoảng biến thiên",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Khoảng biến thiên của mẫu số liệu 5, 5, 5, 5 bằng bao nhiêu?",
+    "options": [
+      "0",
+      "5",
+      "10",
+      "20"
+    ],
+    "answer": "0",
+    "explanation": "R = 5 − 5 = 0."
+  },
+  {
+    "id": "VAR_009",
+    "land": "variation",
+    "topic": "Phương sai",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Kí hiệu thường dùng cho phương sai của mẫu số liệu là gì?",
+    "options": [
+      "s²",
+      "x̄",
+      "Mₑ",
+      "M₀"
+    ],
+    "answer": "s²",
+    "explanation": "x̄ là trung bình cộng, Mₑ là trung vị, M₀ là mốt; phương sai kí hiệu s²."
+  },
+  {
+    "id": "VAR_010",
+    "land": "variation",
+    "topic": "Phương sai",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Phương sai là trung bình cộng của bình phương các đại lượng nào?",
+    "options": [
+      "Độ lệch của từng giá trị so với số trung bình",
+      "Các giá trị của mẫu",
+      "Hiệu giá trị lớn nhất và nhỏ nhất",
+      "Tần số của các giá trị"
+    ],
+    "answer": "Độ lệch của từng giá trị so với số trung bình",
+    "explanation": "s² = [(x₁ − x̄)² + … + (xₙ − x̄)²] : n."
+  },
+  {
+    "id": "VAR_011",
+    "land": "variation",
+    "topic": "Độ lệch chuẩn",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Mẫu A: 4, 5, 5, 6 và mẫu B: 1, 3, 7, 9 đều có số trung bình bằng 5. Mẫu nào có độ lệch chuẩn lớn hơn?",
+    "options": [
+      "Mẫu B",
+      "Mẫu A",
+      "Hai mẫu bằng nhau",
+      "Không so sánh được"
+    ],
+    "answer": "Mẫu B",
+    "explanation": "Các giá trị của B nằm xa số trung bình hơn nhiều so với A nên B phân tán hơn, độ lệch chuẩn lớn hơn."
+  },
+  {
+    "id": "VAR_012",
+    "land": "variation",
+    "topic": "Độ lệch chuẩn",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Nhân tất cả giá trị của mẫu số liệu với 2 thì độ lệch chuẩn thay đổi như thế nào?",
+    "options": [
+      "Nhân với 2",
+      "Không đổi",
+      "Cộng thêm 2",
+      "Nhân với 4"
+    ],
+    "answer": "Nhân với 2",
+    "explanation": "Dữ liệu giãn ra gấp 2 lần nên độ lệch chuẩn gấp 2 lần (phương sai gấp 4 lần)."
+  },
+  {
+    "id": "VAR_013",
+    "land": "variation",
+    "topic": "Phương sai",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Cộng thêm 10 vào tất cả giá trị của mẫu số liệu thì phương sai thay đổi như thế nào?",
+    "options": [
+      "Không đổi",
+      "Tăng thêm 10",
+      "Tăng thêm 100",
+      "Nhân với 10"
+    ],
+    "answer": "Không đổi",
+    "explanation": "Số trung bình cũng tăng 10 nên các độ lệch so với trung bình không đổi, phương sai không đổi."
+  },
+  {
+    "id": "VAR_014",
+    "land": "variation",
+    "topic": "Phương sai",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Vì sao trong công thức phương sai phải bình phương các độ lệch (xᵢ − x̄)?",
+    "options": [
+      "Vì tổng các độ lệch so với số trung bình luôn bằng 0 (âm, dương triệt tiêu nhau)",
+      "Vì để số liệu lớn hơn",
+      "Vì để đổi đơn vị sang mét",
+      "Vì để đưa trung bình về 0"
+    ],
+    "answer": "Vì tổng các độ lệch so với số trung bình luôn bằng 0 (âm, dương triệt tiêu nhau)",
+    "explanation": "Nếu không bình phương, độ lệch âm và dương triệt tiêu và không đo được mức phân tán."
+  },
+  {
+    "id": "VAR_015",
+    "land": "variation",
+    "topic": "Khoảng biến thiên",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Nhược điểm chính của khoảng biến thiên là gì?",
+    "options": [
+      "Chỉ phụ thuộc vào giá trị lớn nhất và nhỏ nhất nên dễ bị ảnh hưởng bởi giá trị ngoại lai",
+      "Không thể tính được với số thập phân",
+      "Luôn bằng 0",
+      "Không bao giờ dương"
+    ],
+    "answer": "Chỉ phụ thuộc vào giá trị lớn nhất và nhỏ nhất nên dễ bị ảnh hưởng bởi giá trị ngoại lai",
+    "explanation": "Khoảng biến thiên bỏ qua các giá trị ở giữa, chỉ cần một giá trị bất thường là R thay đổi mạnh."
+  },
+  {
+    "id": "VAR_016",
+    "land": "variation",
+    "topic": "Phương sai",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Chiều cao các bạn được đo bằng cm. Đơn vị của phương sai là gì?",
+    "options": [
+      "cm²",
+      "cm",
+      "cm³",
+      "Không có đơn vị"
+    ],
+    "answer": "cm²",
+    "explanation": "Phương sai là trung bình bình phương độ lệch nên có đơn vị bình phương; độ lệch chuẩn mới có đơn vị cm."
+  },
+  {
+    "id": "VAR_017",
+    "land": "variation",
+    "topic": "Độ lệch chuẩn",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Đội A và đội B đều có điểm trung bình 8; độ lệch chuẩn của đội A là 0,5 và của đội B là 2. Đội nào có kết quả ổn định hơn?",
+    "options": [
+      "Đội A",
+      "Đội B",
+      "Hai đội như nhau",
+      "Không kết luận được"
+    ],
+    "answer": "Đội A",
+    "explanation": "Độ lệch chuẩn nhỏ hơn nghĩa là các kết quả tập trung hơn quanh trung bình, tức ổn định hơn."
+  },
+  {
+    "id": "VAR_018",
+    "land": "variation",
+    "topic": "Phương sai",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Khi nào phương sai của mẫu số liệu bằng 0?",
+    "options": [
+      "Khi tất cả các giá trị bằng nhau",
+      "Khi trung bình cộng bằng 0",
+      "Khi mẫu có một giá trị 0",
+      "Khi mẫu có số giá trị chẵn"
+    ],
+    "answer": "Khi tất cả các giá trị bằng nhau",
+    "explanation": "s² = 0 khi mọi độ lệch (xᵢ − x̄) đều bằng 0."
+  },
+  {
+    "id": "VAR_019",
+    "land": "variation",
+    "topic": "Độ lệch chuẩn",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Độ lệch chuẩn của một mẫu số liệu là 3. Phương sai của mẫu là bao nhiêu?",
+    "options": [
+      "3",
+      "6",
+      "9",
+      "√3"
+    ],
+    "answer": "9",
+    "explanation": "s² = s · s = 3² = 9."
+  },
+  {
+    "id": "VAR_020",
+    "land": "variation",
+    "topic": "Phương sai",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Nhân tất cả giá trị của mẫu số liệu với 3 thì phương sai thay đổi như thế nào?",
+    "options": [
+      "Nhân với 9",
+      "Nhân với 3",
+      "Không đổi",
+      "Cộng thêm 3"
+    ],
+    "answer": "Nhân với 9",
+    "explanation": "Độ lệch chuẩn nhân 3 nên phương sai nhân 3² = 9."
+  },
+  {
+    "id": "VAR_021",
+    "land": "variation",
+    "topic": "Khoảng biến thiên",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Nhiệt độ (°C) 5 ngày: 21, 25, 19, 30, 27. Khoảng biến thiên của mẫu là bao nhiêu?",
+    "options": [
+      "9",
+      "11",
+      "13",
+      "19"
+    ],
+    "answer": "11",
+    "explanation": "R = 30 − 19 = 11."
+  },
+  {
+    "id": "VAR_022",
+    "land": "variation",
+    "topic": "Phương sai",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Phương sai của mẫu số liệu 2, 4, 4, 6 là bao nhiêu?",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "8"
+    ],
+    "answer": "2",
+    "explanation": "Trung bình = 4. Các bình phương độ lệch: 4, 0, 0, 4. Phương sai = 8 : 4 = 2."
+  },
+  {
+    "id": "VAR_023",
+    "land": "variation",
+    "topic": "Độ lệch chuẩn",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Độ lệch chuẩn của mẫu số liệu 2, 2, 6, 6 là bao nhiêu?",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "8"
+    ],
+    "answer": "2",
+    "explanation": "Trung bình = 4, mỗi độ lệch có bình phương 4. Phương sai = 16 : 4 = 4, độ lệch chuẩn = √4 = 2."
+  },
+  {
+    "id": "VAR_024",
+    "land": "variation",
+    "topic": "Phương sai",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Mẫu A: 6, 8, 10 và mẫu B: 7, 8, 9 đều có trung bình 8. Phương sai của A gấp mấy lần phương sai của B?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "8"
+    ],
+    "answer": "4",
+    "explanation": "Phương sai A = (4 + 0 + 4) : 3 = 8/3. Phương sai B = (1 + 0 + 1) : 3 = 2/3. Tỉ số = 4."
+  },
+  {
+    "id": "VAR_025",
+    "land": "variation",
+    "topic": "Độ lệch chuẩn",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Hai tuyến xe buýt đều có thời gian đi trung bình 30 phút; độ lệch chuẩn của tuyến 1 là 2 phút, của tuyến 2 là 9 phút. Muốn đến nơi đúng giờ, bạn nên chọn tuyến nào?",
+    "options": [
+      "Tuyến 1",
+      "Tuyến 2",
+      "Tuyến nào cũng như nhau",
+      "Không chọn được"
+    ],
+    "answer": "Tuyến 1",
+    "explanation": "Độ lệch chuẩn nhỏ nghĩa là thời gian đi ít dao động, đáng tin cậy hơn."
+  },
+  {
+    "id": "VAR_026",
+    "land": "variation",
+    "topic": "Phương sai",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Phương sai của mẫu số liệu 1, 2, 3, 4, 5 (công thức chia cho n) là bao nhiêu?",
+    "options": [
+      "1",
+      "2",
+      "2,5",
+      "10"
+    ],
+    "answer": "2",
+    "explanation": "Trung bình = 3. Tổng bình phương độ lệch = 4 + 1 + 0 + 1 + 4 = 10. Phương sai = 10 : 5 = 2."
+  },
+  {
+    "id": "VAR_027",
+    "land": "variation",
+    "topic": "Độ lệch chuẩn",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Mẫu số liệu 2, 2, 6, 6 có độ lệch chuẩn là 2. Biến đổi mỗi giá trị x thành 2x + 5, độ lệch chuẩn mới là bao nhiêu?",
+    "options": [
+      "2",
+      "4",
+      "9",
+      "13"
+    ],
+    "answer": "4",
+    "explanation": "Cộng 5 không đổi độ lệch chuẩn; nhân 2 làm độ lệch chuẩn gấp đôi: 2 · 2 = 4."
+  },
+  {
+    "id": "VAR_028",
+    "land": "variation",
+    "topic": "Khoảng biến thiên",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Giá một món ăn (nghìn đồng) ở 6 quán: 45, 38, 52, 40, 60, 35. Khoảng biến thiên của giá là bao nhiêu?",
+    "options": [
+      "15",
+      "25",
+      "35",
+      "60"
+    ],
+    "answer": "25",
+    "explanation": "R = 60 − 35 = 25."
+  },
+  {
+    "id": "VAR_029",
+    "land": "variation",
+    "topic": "Độ lệch chuẩn",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Phương sai của mẫu 1 là 4, của mẫu 2 là 9. Độ lệch chuẩn của mẫu 2 gấp mấy lần độ lệch chuẩn của mẫu 1?",
+    "options": [
+      "1,5",
+      "2,25",
+      "5",
+      "0,67"
+    ],
+    "answer": "1,5",
+    "explanation": "Độ lệch chuẩn mẫu 1 = 2, mẫu 2 = 3; 3 : 2 = 1,5."
+  },
+  {
+    "id": "VAR_030",
+    "land": "variation",
+    "topic": "Phương sai",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Phương sai của mẫu số liệu 5, 7, 9, 11, 13 là bao nhiêu?",
+    "options": [
+      "4",
+      "8",
+      "10",
+      "40"
+    ],
+    "answer": "8",
+    "explanation": "Trung bình = 9. Tổng bình phương độ lệch = 16 + 4 + 0 + 4 + 16 = 40. Phương sai = 40 : 5 = 8."
+  }
+]

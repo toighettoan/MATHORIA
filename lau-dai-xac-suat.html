@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lâu Đài Xác Suất · MATHORIA</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0f0a1f; --bg2:#1a1236; --card:#171030; --line:rgba(167,139,250,.22);
+  --text:#ece8ff; --muted:#a79fc9; --violet:#8b5cf6; --amber:#f59e0b; --amber2:#fbbf24;
+  --cyan:#67e8f9; --ok:#34d399; --bad:#fb7185;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Nunito",system-ui,sans-serif;color:var(--text);line-height:1.6;
+  background:radial-gradient(900px 500px at 50% -10%,#3b1d6e55,transparent),var(--bg);min-height:100vh}
+a{color:var(--cyan);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--amber2);outline-offset:2px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;border-bottom:1px solid var(--line)}
+.brand{font-weight:800;letter-spacing:.04em}
+.chip{border:1px solid var(--line);border-radius:999px;padding:5px 14px;font-size:.85rem;color:var(--muted)}
+.chip b{color:var(--amber2)}
+header.hero{text-align:center;padding:42px 5vw 30px;background:linear-gradient(180deg,#2a1450,transparent)}
+.badge{display:inline-block;background:#f59e0b22;color:var(--amber2);border:1px solid #f59e0b55;border-radius:999px;padding:3px 14px;font-size:.8rem;font-weight:700;margin:8px 0 14px}
+h1{margin:0;font-size:clamp(2rem,5vw,3rem);font-weight:800}
+.sub{color:var(--muted);max-width:56ch;margin:10px auto 0}
+main{max-width:1000px;margin:0 auto;padding:10px 5vw 70px}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.tab{background:var(--card);border:1px solid var(--line);color:var(--text);border-radius:12px;padding:10px 18px;font:inherit;font-weight:700;cursor:pointer}
+.tab[aria-selected="true"]{background:linear-gradient(135deg,var(--amber),#d97706);color:#1c1003;border-color:transparent}
+.panel{display:none}.panel.on{display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.card h3{margin:0 0 6px;font-size:1.15rem}
+.kicker{color:var(--amber2);font-size:.8rem;font-weight:700;margin-bottom:4px}
+.formula{background:#0c0820;border:1px dashed #f59e0b66;border-radius:12px;padding:12px 14px;margin:10px 0;color:var(--amber2);font-weight:700;text-align:center}
+.ex{border-left:3px solid var(--violet);background:#ffffff0a;padding:9px 13px;border-radius:0 10px 10px 0;color:var(--muted);font-size:.95rem}
+.ex b{color:var(--text)}
+label{display:block;font-size:.9rem;color:var(--muted);margin-bottom:5px}
+select,input[type=number],input[type=text]{width:100%;background:#0c0820;color:var(--text);border:1px solid var(--line);border-radius:12px;padding:11px 14px;font:inherit}
+.btn{background:linear-gradient(135deg,var(--violet),#6366f1);color:#fff;border:0;border-radius:12px;padding:11px 18px;font:inherit;font-weight:800;cursor:pointer}
+.btn.alt{background:#2b2150;border:1px solid var(--line)}
+.btn:hover{filter:brightness(1.12)}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:#0c0820;border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.stat small{color:var(--muted);display:block}
+.stat strong{font-size:1.4rem;color:var(--amber2)}
+canvas{width:100%;height:230px;background:#0c0820;border:1px solid var(--line);border-radius:14px;display:block}
+.note{color:var(--muted);font-size:.92rem;margin-top:10px}
+.q{margin-bottom:16px}
+.q p{margin:0 0 8px;font-weight:700}
+.fb{font-size:.9rem;margin-top:6px;min-height:1.2em}
+.fb.ok{color:var(--ok)}.fb.bad{color:var(--bad)}
+.result{margin-top:18px;padding:18px 20px;border-radius:16px;border:1px solid var(--line);display:none}
+.result.show{display:block}
+.result.win{background:#34d3991a;border-color:#34d39966}
+.result.lose{background:#fb71851a;border-color:#fb718566}
+.gem{font-size:2.4rem}
+@media (prefers-reduced-motion:no-preference){.gem.pop{animation:pop .7s ease}}
+@keyframes pop{0%{transform:scale(.3) rotate(-20deg)}70%{transform:scale(1.25)}100%{transform:scale(1)}}
+:root{--ia:var(--violet);--ib:var(--amber2);--ic:var(--cyan);--idim:var(--muted);--iline:rgba(167,139,250,.25);--ion:#fff}
+/* ===== Hình minh hoạ phần lý thuyết (đồng bộ với 3 vùng đất còn lại) ===== */
+.il{margin:12px 0 6px;padding:12px 12px 8px;border-radius:14px;background:rgba(0,0,0,.28);border:1px solid var(--iline)}
+.il svg{display:block;width:100%;height:auto;overflow:visible}
+.il text{font:700 11px Nunito,system-ui,sans-serif;fill:var(--idim)}
+.il .t-a{fill:var(--ia)}.il .t-b{fill:var(--ib)}.il .t-c{fill:var(--ic)}
+.il .cap{margin:6px 0 2px;font-size:.88rem;line-height:1.5;color:var(--idim);text-align:center}
+.il .cap b{color:var(--ib)}
+.il-chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.il-chips span{min-width:36px;padding:6px 9px;border-radius:9px;text-align:center;font-weight:800;background:rgba(255,255,255,.06);border:1px solid var(--iline);color:inherit}
+.il-chips .hit{background:var(--ia);border-color:transparent;color:var(--ion);box-shadow:0 4px 14px color-mix(in srgb,var(--ia) 40%,transparent)}
+.il-chips .mid{background:var(--ib);border-color:transparent;color:#2a1c00}
+.il-tbl{width:100%;border-collapse:collapse;font-size:.92rem}
+.il-tbl th,.il-tbl td{padding:5px 8px;text-align:center;border-bottom:1px solid var(--iline)}
+.il-tbl th{color:var(--idim);font-weight:700}.il-tbl tr:last-child td{border-bottom:0;color:var(--ib);font-weight:800}
+.il-bar{display:flex;height:26px;border-radius:99px;overflow:hidden;border:1px solid var(--iline)}
+.il-bar i{display:block;height:100%}
+.il-key{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:8px;font-size:.84rem;color:var(--idim);font-weight:700}
+.il-key b{color:var(--ib)}
+.il-waffle{display:grid;grid-template-columns:repeat(10,1fr);gap:4px;max-width:300px;margin:0 auto}
+.il-waffle i{aspect-ratio:1;border-radius:5px;background:rgba(255,255,255,.08)}
+.il-waffle i.on{background:var(--ia);box-shadow:0 0 8px color-mix(in srgb,var(--ia) 55%,transparent)}
+.il-pair{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:420px){.il-pair{grid-template-columns:1fr}}
+</style>
+<!-- ===== Nút về bản đồ (đồng bộ với Thung Lũng Biến Thiên) ===== -->
+<style>
+  .back-map{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:9px 18px; border-radius:99px;
+    color:#fff !important; text-decoration:none !important;
+    font:800 15px/1.2 Nunito, system-ui, sans-serif;
+    background:rgba(255,255,255,.09);
+    border:1px solid rgba(255,255,255,.25);
+    backdrop-filter:blur(8px);
+    box-shadow:0 4px 16px rgba(0,0,0,.25);
+    transition:transform .2s, border-color .2s, background .2s;
+  }
+  .back-map:hover{ transform:translateY(-2px); border-color:#9be7ff; background:rgba(255,255,255,.15); }
+  .back-map:focus-visible{ outline:3px solid #ffd37a; outline-offset:3px; }
+  .back-map.floating{ position:fixed; top:16px; left:16px; z-index:50; }
+
+.math{font-family:"Cambria Math","STIX Two Math","Times New Roman",serif;font-style:italic;font-size:1.3em;letter-spacing:.3px}
+.math sup{font-size:.7em}
+.frac{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;margin:0 .3em;line-height:1.3}
+.frac>span:first-child{padding:0 .4em .15em;border-bottom:2px solid currentColor}
+.frac>span:last-child{padding:.15em .4em 0}
+.formula-note{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:8px;font-size:15px;line-height:1.5;opacity:.95}
+.formula-note li{padding-left:14px;border-left:3px solid rgba(255,255,255,.18)}
+.formula-note .math{font-size:1.15em;margin-right:4px}
+
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var TARGET = "index.html#world";
+  var links = document.querySelectorAll('a[href*="index.html"]');
+  var btn = links[0];
+  if (!btn) {                       // không có link cũ thì tạo nút nổi ở góc trái
+    btn = document.createElement("a");
+    btn.className = "floating";
+    document.body.appendChild(btn);
+  }
+  for (var i = 1; i < links.length; i++) links[i].style.display = "none"; // ẩn link thừa
+  btn.href = TARGET;
+  btn.textContent = "← Về bản đồ";
+  btn.classList.add("back-map");
+});
+</script>
+</head>
+<body>
+<div class="top">
+  <span class="brand">MATHORIA</span>
+  <span class="chip">Nhà thám hiểm · <b id="gemCount">0</b> ✦</span>
+</div>
+
+<header class="hero">
+  <a href="index.html">← Quay lại bản đồ MATHORIA</a><br>
+  <span class="badge">VÙNG ĐẤT 05 · THỬ THÁCH CUỐI</span>
+  <h1>🔮 Lâu Đài Xác Suất</h1>
+  <p class="sub">Gom mọi thứ bạn đã học: tính xác suất, thử nghiệm để kiểm chứng và dự đoán trong tình huống thực tế.</p>
+</header>
+
+<main>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-tab="lib">📚 Thư viện kiến thức</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="lab">🧪 Phòng thực nghiệm</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="quiz">⚔️ Thử thách cuối</button>
+  </div>
+
+  <!-- KIẾN THỨC -->
+  <section class="panel on" id="lib">
+    <div class="grid">
+      <article class="card">
+        <div class="kicker">Bài học 1</div><h3>Xác suất lý thuyết</h3>
+        <p>Khi các kết quả có khả năng xảy ra như nhau, xác suất của biến cố A là tỉ số giữa số kết quả thuận lợi và tổng số kết quả.</p>
+        <div class="formula"><span class="math">P(A) = <span class="frac"><span>n(A)</span><span>n(Ω)</span></span></span></div>
+        <ul class="formula-note">
+        <li><span class="math">n(A)</span>: Số kết quả thuận lợi cho biến cố A (số phần tử của biến cố A).</li>
+        <li><span class="math">n(Ω)</span>: Tổng số kết quả có thể xảy ra (số phần tử của không gian mẫu Ω).</li>
+</ul>
+        <div class="il" role="img" aria-label="Sáu mặt xúc xắc, ba mặt chẵn 2, 4, 6 được tô sáng; xác suất 3 phần 6"><div class="il-chips"><span>1</span><span class="hit">2</span><span>3</span><span class="hit">4</span><span>5</span><span class="hit">6</span></div><p class="cap">3 mặt sáng (thuận lợi) trên 6 mặt (đồng khả năng): <b>P = 3/6 = 0,5</b>.</p><svg viewBox="0 0 240 44" style="margin-top:4px"><circle cx="40" cy="18" r="13" fill="#fb7185"/><circle cx="80" cy="18" r="13" fill="#fb7185"/><circle cx="120" cy="18" r="13" fill="#fb7185"/><circle cx="160" cy="18" r="13" fill="#38bdf8"/><circle cx="200" cy="18" r="13" fill="#38bdf8"/><text x="120" y="42" text-anchor="middle">Túi bi: 3 đỏ, 2 xanh → P(đỏ) = 3/5</text></svg></div><div class="ex"><b>Ví dụ:</b> Tung xúc xắc, ra mặt chẵn có 3 kết quả thuận lợi (2, 4, 6) trên 6 kết quả. P = 3/6 = 0,5.</div>
+      </article>
+      <article class="card">
+        <div class="kicker">Bài học 2</div><h3>Xác suất thực nghiệm</h3>
+        <p>Làm thí nghiệm nhiều lần rồi ghi lại tần suất xảy ra của biến cố. Số lần thử càng lớn, kết quả càng gần xác suất lý thuyết.</p>
+        <div class="formula"><span class="math">P<sup>*</sup>(A) = <span class="frac"><span>k</span><span>n</span></span></span></div>
+        <ul class="formula-note">
+        <li><span class="math">k</span>: Số lần biến cố A thực tế xảy ra trong quá trình làm thí nghiệm (tần số).</li>
+        <li><span class="math">n</span>: Tổng số lần thực hiện phép thử.</li>
+</ul>
+        <div class="il" role="img" aria-label="Minh hoạ: tần suất thực nghiệm tiến dần về xác suất lý thuyết 0,5 khi số lần thử tăng"><svg viewBox="0 0 260 128"><line x1="30" y1="64.0" x2="250" y2="64.0" stroke="var(--amber2)" stroke-width="2" stroke-dasharray="6 4"/><text x="252" y="58.0" text-anchor="end" class="t-b">0,5 (lý thuyết)</text><polyline points="40,28.0 90,53.2 140,60.4 190,63.3 240,64.0" fill="none" stroke="var(--cyan)" stroke-width="2.5" stroke-linejoin="round"/><circle cx="40" cy="28.0" r="4" fill="var(--cyan)"/><text x="40" y="20.0" text-anchor="middle" class="t-c">0,7</text><text x="40" y="122" text-anchor="middle">10</text><circle cx="90" cy="53.2" r="4" fill="var(--cyan)"/><text x="90" y="45.2" text-anchor="middle" class="t-c">0,56</text><text x="90" y="122" text-anchor="middle">50</text><circle cx="140" cy="60.4" r="4" fill="var(--cyan)"/><text x="140" y="52.4" text-anchor="middle" class="t-c">0,52</text><text x="140" y="122" text-anchor="middle">100</text><circle cx="190" cy="63.3" r="4" fill="var(--cyan)"/><text x="190" y="122" text-anchor="middle">500</text><circle cx="240" cy="64.0" r="4" fill="var(--cyan)"/><text x="240" y="122" text-anchor="middle">1000</text></svg><p class="cap">Thử càng nhiều lần, <b>tần suất</b> càng sát xác suất lý thuyết (số liệu minh hoạ).</p></div><div class="ex"><b>Ví dụ:</b> Tung đồng xu 50 lần, được 28 lần sấp. P*(sấp) = 28/50 = 0,56.</div>
+      </article>
+      <article class="card">
+        <div class="kicker">Bài học 3</div><h3>Biến cố đối</h3>
+        <p>Biến cố "Ā" gọi là biến cố đối của A. Hai xác suất này cộng lại luôn bằng 1.</p>
+        <div class="formula">P(Ā) = 1 − P(A)</div>
+        <div class="il" role="img" aria-label="Thanh 100 phần trăm chia thành 5 phần trăm trúng thưởng và 95 phần trăm không trúng"><div class="il-bar"><i style="width:5%;background:var(--amber2)"></i><i style="width:95%;background:var(--violet)"></i></div><div class="il-key"><span><b>P(A) = 0,05</b> trúng</span><span><b>P(Ā) = 0,95</b> không trúng</span></div><p class="cap">Hai phần ghép lại thành cả thanh: <b>0,05 + 0,95 = 1</b>.</p></div><div class="ex"><b>Ví dụ:</b> Xác suất trúng thưởng là 0,05 thì xác suất không trúng là 1 − 0,05 = 0,95.</div>
+      </article>
+      <article class="card">
+        <div class="kicker">Ứng dụng thực tế</div><h3>Dự đoán từ dữ liệu</h3>
+        <p>Dự báo thời tiết, kiểm tra hàng lỗi hay khảo sát ý kiến đều dựa vào xác suất thực nghiệm để ước lượng khả năng xảy ra trong tương lai.</p>
+        <div class="il" role="img" aria-label="40 ngày, 14 ngày mưa được tô sáng"><div class="il-waffle" data-n="40" data-k="14"></div><p class="cap">14 ô sáng là ngày mưa trong 40 ngày: <b>14/40 = 0,35</b>.</p></div><div class="ex"><b>Ví dụ:</b> Trong 40 ngày của tháng trước có 14 ngày mưa, ta ước lượng xác suất ngày mai mưa khoảng 14/40 = 0,35.</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- PHÒNG THỰC NGHIỆM -->
+  <section class="panel" id="lab">
+    <div class="grid">
+      <div class="card">
+        <h3>🧪 Chọn thí nghiệm</h3>
+        <label for="exp">Thí nghiệm</label>
+        <select id="exp">
+          <option value="dice">🎲 Tung xúc xắc: ra mặt từ 5 trở lên</option>
+          <option value="coin">🪙 Tung đồng xu: ra mặt sấp</option>
+          <option value="box">🎯 Hộp bi: rút được bi đỏ</option>
+        </select>
+        <div id="boxCfg" class="row" style="display:none">
+          <div style="flex:1"><label for="red">Số bi đỏ</label><input type="number" id="red" min="1" max="20" value="3"></div>
+          <div style="flex:1"><label for="blue">Số bi xanh</label><input type="number" id="blue" min="1" max="20" value="7"></div>
+        </div>
+        <div class="row">
+          <button class="btn" data-n="10">Thử 10 lần</button>
+          <button class="btn" data-n="100">Thử 100 lần</button>
+          <button class="btn" data-n="1000">Thử 1000 lần</button>
+          <button class="btn alt" id="reset">Làm lại</button>
+        </div>
+        <div class="stats">
+          <div class="stat"><small>Số lần thử</small><strong id="sN">0</strong></div>
+          <div class="stat"><small>Số lần xảy ra</small><strong id="sH">0</strong></div>
+          <div class="stat"><small>Xác suất thực nghiệm</small><strong id="sE">–</strong></div>
+          <div class="stat"><small>Xác suất lý thuyết</small><strong id="sT">–</strong></div>
+        </div>
+        <p class="note" id="insight">Hãy bấm thử và quan sát tần suất thay đổi thế nào.</p>
+      </div>
+      <div class="card">
+        <h3>📈 Tần suất theo số lần thử</h3>
+        <canvas id="chart" aria-label="Biểu đồ tần suất tiến dần về xác suất lý thuyết"></canvas>
+        <p class="note">Đường vàng nét đứt là xác suất lý thuyết. Đường xanh là tần suất thực nghiệm sau mỗi lần thử.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THỬ THÁCH -->
+  <section class="panel" id="quiz">
+    <div class="card">
+      <h3>⚔️ Thử thách của chủ lâu đài</h3>
+      <div id="quizMount"></div>
+    </div>
+  </section>
+</main>
+
+<script src="data/questions-bundle.js"></script>
+<script src="js/quiz-engine.js"></script>
+<script src="js/quiz-widget.js"></script>
+<script>
+/* ===== Pha lê: chỉnh 2 dòng này cho khớp cách lưu của 4 đảo trước ===== */
+const STORE_KEY = 'mathoria-completed-lands';
+const ISLAND_ID = 'castle';
+function getGems(){ try{ const v=JSON.parse(localStorage.getItem(STORE_KEY)); return Array.isArray(v)?v:[]; }catch(e){ return []; } }
+function awardGem(){
+  const g=getGems(); if(!g.includes(ISLAND_ID)){ g.push(ISLAND_ID); try{ localStorage.setItem(STORE_KEY,JSON.stringify(g)); }catch(e){} }
+  showGems();
+}
+function showGems(){ document.getElementById('gemCount').textContent=getGems().length; }
+showGems();
+
+/* ===== Tabs ===== */
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected',x===t));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===t.dataset.tab));
+  if(t.dataset.tab==='lab') draw();
+}));
+
+/* ===== Phòng thực nghiệm ===== */
+const $=id=>document.getElementById(id);
+let trials=0,hits=0,series=[];
+function theory(){
+  const e=$('exp').value;
+  if(e==='dice') return 2/6;
+  if(e==='coin') return 1/2;
+  const r=+$('red').value||1,b=+$('blue').value||1; return r/(r+b);
+}
+function oneTrial(){
+  const e=$('exp').value;
+  if(e==='dice') return Math.floor(Math.random()*6)+1>=5;
+  if(e==='coin') return Math.random()<0.5;
+  const r=+$('red').value||1,b=+$('blue').value||1; return Math.random()*(r+b)<r;
+}
+function run(n){
+  for(let i=0;i<n;i++){ trials++; if(oneTrial()) hits++; series.push(hits/trials); }
+  update();
+}
+function resetLab(){ trials=0;hits=0;series=[]; update(); }
+function update(){
+  const p=theory();
+  $('sN').textContent=trials; $('sH').textContent=hits;
+  $('sE').textContent=trials?(hits/trials).toFixed(3).replace('.',','):'–';
+  $('sT').textContent=p.toFixed(3).replace('.',',');
+  if(!trials) $('insight').textContent='Hãy bấm thử và quan sát tần suất thay đổi thế nào.';
+  else if(trials<50) $('insight').textContent='Mới thử ít lần nên tần suất còn dao động mạnh. Hãy thử thêm.';
+  else $('insight').textContent='Chênh lệch với xác suất lý thuyết hiện là '+Math.abs(hits/trials-p).toFixed(3).replace('.',',')+'. Số lần thử càng nhiều, chênh lệch thường càng nhỏ.';
+  draw();
+}
+function draw(){
+  const c=$('chart'); const dpr=window.devicePixelRatio||1;
+  const w=c.clientWidth,h=c.clientHeight; if(!w) return;
+  c.width=w*dpr;c.height=h*dpr;
+  const x=c.getContext('2d'); x.scale(dpr,dpr); x.clearRect(0,0,w,h);
+  const L=38,R=10,T=12,B=22,pw=w-L-R,ph=h-T-B;
+  x.strokeStyle='#ffffff22';x.fillStyle='#a79fc9';x.font='11px Nunito, sans-serif';x.lineWidth=1;
+  for(let i=0;i<=4;i++){const y=T+ph*i/4;x.beginPath();x.moveTo(L,y);x.lineTo(w-R,y);x.stroke();x.fillText((1-i/4).toFixed(2).replace('.',','),4,y+4);}
+  const p=theory(),py=T+ph*(1-p);
+  x.setLineDash([6,5]);x.strokeStyle='#fbbf24';x.lineWidth=2;x.beginPath();x.moveTo(L,py);x.lineTo(w-R,py);x.stroke();x.setLineDash([]);
+  if(series.length){
+    x.strokeStyle='#67e8f9';x.lineWidth=2;x.beginPath();
+    const N=series.length,step=Math.max(1,Math.floor(N/400));
+    for(let i=0;i<N;i+=step){const px=L+pw*(N>1?i/(N-1):0),py2=T+ph*(1-series[i]);i?x.lineTo(px,py2):x.moveTo(px,py2);}
+    x.lineTo(L+pw,T+ph*(1-series[N-1]));x.stroke();
+    x.fillStyle='#a79fc9';x.fillText('lần thử: '+N,w-R-80,h-6);
+  }
+}
+document.querySelectorAll('[data-n]').forEach(b=>b.addEventListener('click',()=>run(+b.dataset.n)));
+$('reset').addEventListener('click',resetLab);
+$('exp').addEventListener('change',()=>{ $('boxCfg').style.display=$('exp').value==='box'?'flex':'none'; resetLab(); });
+['red','blue'].forEach(i=>$(i).addEventListener('change',resetLab));
+window.addEventListener('resize',draw);
+update();
+
+/* ===== Thử thách cuối (câu hỏi random từ ngân hàng 30 câu) ===== */
+MathoriaQuizWidget.mount({
+  container:'#quizMount',
+  land:'castle',
+  alreadyEarned:()=>getGems().includes(ISLAND_ID),
+  passMessage:'Lâu đài đã mở cổng. Bạn nhận được pha lê cuối cùng và hoàn thành hành trình qua cả 5 vùng đất của Mathoria.',
+  onPass:awardGem,
+  theme:{card:'rgba(255,255,255,.05)',onAccent:'#ffffff',text:'var(--text)',muted:'var(--muted)',line:'var(--line)',accent:'var(--violet)',accent2:'#6366f1',ok:'var(--ok)',bad:'var(--bad)',gold:'var(--amber2)'}
+});
+</script>
+<script>document.querySelectorAll('.il-waffle').forEach(w=>{for(let i=0;i<+w.dataset.n;i++){const c=document.createElement('i');if(i<+w.dataset.k)c.className='on';w.appendChild(c)}})</script>
+  <script src="js/ai-context.js"></script>
+  <script src="js/ai-assistant.js"></script>
+</body>
+</html>

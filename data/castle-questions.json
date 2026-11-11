@@ -1,0 +1,482 @@
+[
+  {
+    "id": "CASTLE_001",
+    "land": "castle",
+    "topic": "Xác suất lý thuyết",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Khi các kết quả đồng khả năng, xác suất của biến cố A được tính bằng công thức nào?",
+    "options": [
+      "Số kết quả thuận lợi cho A chia cho số kết quả có thể",
+      "Số kết quả có thể chia cho số kết quả thuận lợi",
+      "Số kết quả thuận lợi nhân số kết quả có thể",
+      "Số kết quả thuận lợi trừ số kết quả có thể"
+    ],
+    "answer": "Số kết quả thuận lợi cho A chia cho số kết quả có thể",
+    "explanation": "P(A) = n(A) : n(Ω)."
+  },
+  {
+    "id": "CASTLE_002",
+    "land": "castle",
+    "topic": "Xác suất lý thuyết",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Xác suất của biến cố chắc chắn bằng bao nhiêu?",
+    "options": [
+      "0",
+      "0,5",
+      "1",
+      "Không xác định"
+    ],
+    "answer": "1",
+    "explanation": "Biến cố chắc chắn luôn xảy ra nên P = 1."
+  },
+  {
+    "id": "CASTLE_003",
+    "land": "castle",
+    "topic": "Xác suất lý thuyết",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Xác suất của biến cố không thể bằng bao nhiêu?",
+    "options": [
+      "0",
+      "0,5",
+      "1",
+      "−1"
+    ],
+    "answer": "0",
+    "explanation": "Biến cố không thể không bao giờ xảy ra nên P = 0."
+  },
+  {
+    "id": "CASTLE_004",
+    "land": "castle",
+    "topic": "Xác suất lý thuyết",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Xác suất của một biến cố bất kì luôn nằm trong khoảng nào?",
+    "options": [
+      "Từ 0 đến 1",
+      "Từ −1 đến 1",
+      "Từ 0 đến 100",
+      "Lớn hơn 1"
+    ],
+    "answer": "Từ 0 đến 1",
+    "explanation": "0 ≤ P(A) ≤ 1."
+  },
+  {
+    "id": "CASTLE_005",
+    "land": "castle",
+    "topic": "Biến cố đối",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Biến cố đối của biến cố A là biến cố nào?",
+    "options": [
+      "Biến cố ‘A không xảy ra’",
+      "Biến cố ‘A xảy ra hai lần’",
+      "Biến cố chắc chắn",
+      "Biến cố không thể"
+    ],
+    "answer": "Biến cố ‘A không xảy ra’",
+    "explanation": "Biến cố đối của A kí hiệu Ā, gồm các kết quả của không gian mẫu không thuộc A."
+  },
+  {
+    "id": "CASTLE_006",
+    "land": "castle",
+    "topic": "Biến cố đối",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Công thức nào sau đây đúng cho biến cố đối Ā của A?",
+    "options": [
+      "P(Ā) = 1 − P(A)",
+      "P(Ā) = P(A)",
+      "P(Ā) = 1 + P(A)",
+      "P(Ā) = 1 : P(A)"
+    ],
+    "answer": "P(Ā) = 1 − P(A)",
+    "explanation": "Vì P(A) + P(Ā) = 1."
+  },
+  {
+    "id": "CASTLE_007",
+    "land": "castle",
+    "topic": "Xác suất thực nghiệm",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Xác suất thực nghiệm của biến cố A được tính bằng công thức nào?",
+    "options": [
+      "Số lần A xảy ra chia cho tổng số lần thực hiện phép thử",
+      "Số lần thực hiện phép thử chia cho số lần A xảy ra",
+      "Số kết quả thuận lợi chia cho số kết quả có thể",
+      "Tổng số lần thực hiện phép thử trừ số lần A xảy ra"
+    ],
+    "answer": "Số lần A xảy ra chia cho tổng số lần thực hiện phép thử",
+    "explanation": "Xác suất thực nghiệm dựa trên kết quả thu được khi thực hiện phép thử nhiều lần."
+  },
+  {
+    "id": "CASTLE_008",
+    "land": "castle",
+    "topic": "Xác suất lý thuyết",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Tung một đồng xu cân đối. Xác suất xuất hiện mặt ngửa là bao nhiêu?",
+    "options": [
+      "1/4",
+      "1/3",
+      "1/2",
+      "1"
+    ],
+    "answer": "1/2",
+    "explanation": "Có 2 kết quả đồng khả năng, 1 kết quả thuận lợi."
+  },
+  {
+    "id": "CASTLE_009",
+    "land": "castle",
+    "topic": "Xác suất lý thuyết",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Gieo một con xúc xắc cân đối 6 mặt. Xác suất xuất hiện mặt 6 chấm là bao nhiêu?",
+    "options": [
+      "1/2",
+      "1/3",
+      "1/6",
+      "1/12"
+    ],
+    "answer": "1/6",
+    "explanation": "1 kết quả thuận lợi trong 6 kết quả đồng khả năng."
+  },
+  {
+    "id": "CASTLE_010",
+    "land": "castle",
+    "topic": "Xác suất lý thuyết",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Giá trị nào sau đây KHÔNG thể là xác suất của một biến cố?",
+    "options": [
+      "1,5",
+      "0",
+      "0,5",
+      "1"
+    ],
+    "answer": "1,5",
+    "explanation": "Xác suất luôn nằm trong đoạn [0; 1]."
+  },
+  {
+    "id": "CASTLE_011",
+    "land": "castle",
+    "topic": "Xác suất lý thuyết",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Gieo một con xúc xắc cân đối. Xác suất xuất hiện mặt có số chấm chẵn là bao nhiêu?",
+    "options": [
+      "1/6",
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "answer": "1/2",
+    "explanation": "Có 3 kết quả thuận lợi (2, 4, 6) trên 6: 3/6 = 1/2."
+  },
+  {
+    "id": "CASTLE_012",
+    "land": "castle",
+    "topic": "Xác suất lý thuyết",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Gieo một con xúc xắc cân đối. Xác suất xuất hiện mặt có số chấm lớn hơn 4 là bao nhiêu?",
+    "options": [
+      "1/6",
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "answer": "1/3",
+    "explanation": "Có 2 kết quả thuận lợi (5, 6) trên 6: 2/6 = 1/3."
+  },
+  {
+    "id": "CASTLE_013",
+    "land": "castle",
+    "topic": "Biến cố đối",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Biết P(A) = 0,3. Xác suất của biến cố đối Ā là bao nhiêu?",
+    "options": [
+      "0,3",
+      "0,7",
+      "1,3",
+      "0,03"
+    ],
+    "answer": "0,7",
+    "explanation": "P(Ā) = 1 − 0,3 = 0,7."
+  },
+  {
+    "id": "CASTLE_014",
+    "land": "castle",
+    "topic": "Xác suất thực nghiệm",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Khi số lần thực hiện phép thử tăng rất lớn, xác suất thực nghiệm của một biến cố thường như thế nào?",
+    "options": [
+      "Dần tiến gần đến xác suất lý thuyết",
+      "Luôn bằng 0",
+      "Luôn bằng 1",
+      "Càng xa xác suất lý thuyết"
+    ],
+    "answer": "Dần tiến gần đến xác suất lý thuyết",
+    "explanation": "Đây là ý tưởng của luật số lớn: thử càng nhiều lần, tần suất càng ổn định quanh xác suất lý thuyết."
+  },
+  {
+    "id": "CASTLE_015",
+    "land": "castle",
+    "topic": "Xác suất thực nghiệm",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Tung một đồng xu cân đối 10 lần, thu được 7 lần sấp. Điều này có mâu thuẫn với xác suất lý thuyết 1/2 không?",
+    "options": [
+      "Không, vì số lần thử còn ít nên xác suất thực nghiệm có thể lệch khỏi lý thuyết",
+      "Có, vì đồng xu chắc chắn không cân đối",
+      "Có, vì xác suất thực nghiệm luôn bằng xác suất lý thuyết",
+      "Không, vì xác suất lý thuyết đã sai"
+    ],
+    "answer": "Không, vì số lần thử còn ít nên xác suất thực nghiệm có thể lệch khỏi lý thuyết",
+    "explanation": "Với ít lần thử, kết quả thực nghiệm dao động; chỉ khi số lần thử lớn mới gần với 1/2."
+  },
+  {
+    "id": "CASTLE_016",
+    "land": "castle",
+    "topic": "Biến cố đối",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Tung hai đồng xu. Biến cố A: ‘có ít nhất một đồng xu sấp’. Biến cố đối của A là gì?",
+    "options": [
+      "Cả hai đồng xu đều ngửa",
+      "Cả hai đồng xu đều sấp",
+      "Có đúng một đồng xu ngửa",
+      "Có ít nhất một đồng xu ngửa"
+    ],
+    "answer": "Cả hai đồng xu đều ngửa",
+    "explanation": "Phủ định của ‘ít nhất một sấp’ là ‘không có đồng xu nào sấp’, tức cả hai ngửa."
+  },
+  {
+    "id": "CASTLE_017",
+    "land": "castle",
+    "topic": "Xác suất lý thuyết",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Một hộp có 2 bi đỏ và 3 bi xanh. Lấy ngẫu nhiên một viên. Xác suất lấy được bi đỏ là bao nhiêu?",
+    "options": [
+      "2/3",
+      "2/5",
+      "3/5",
+      "1/2"
+    ],
+    "answer": "2/5",
+    "explanation": "2 kết quả thuận lợi trên 5 kết quả có thể."
+  },
+  {
+    "id": "CASTLE_018",
+    "land": "castle",
+    "topic": "Xác suất lý thuyết",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Công thức P(A) = (số kết quả thuận lợi) : (số kết quả có thể) chỉ dùng được khi nào?",
+    "options": [
+      "Khi các kết quả có thể xảy ra là đồng khả năng",
+      "Khi A là biến cố không thể",
+      "Khi phép thử được lặp lại 100 lần",
+      "Khi A là biến cố đối"
+    ],
+    "answer": "Khi các kết quả có thể xảy ra là đồng khả năng",
+    "explanation": "Công thức dựa trên giả thiết mọi kết quả có cùng khả năng xảy ra."
+  },
+  {
+    "id": "CASTLE_019",
+    "land": "castle",
+    "topic": "Xác suất lý thuyết",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Một đồng xu cân đối vừa ra 5 lần sấp liên tiếp. Xác suất lần tung tiếp theo ra sấp là bao nhiêu?",
+    "options": [
+      "1/2",
+      "Lớn hơn 1/2",
+      "Nhỏ hơn 1/2",
+      "0"
+    ],
+    "answer": "1/2",
+    "explanation": "Các lần tung độc lập nhau nên xác suất vẫn là 1/2."
+  },
+  {
+    "id": "CASTLE_020",
+    "land": "castle",
+    "topic": "Biến cố đối",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Gieo một con xúc xắc. Biến cố A: ‘số chấm là số chẵn’. Biến cố đối của A là gì?",
+    "options": [
+      "Số chấm là số lẻ",
+      "Số chấm là 6",
+      "Số chấm lớn hơn 3",
+      "Số chấm là số nguyên tố"
+    ],
+    "answer": "Số chấm là số lẻ",
+    "explanation": "Không chẵn thì lẻ: kết quả 1, 3, 5."
+  },
+  {
+    "id": "CASTLE_021",
+    "land": "castle",
+    "topic": "Xác suất lý thuyết",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Rút ngẫu nhiên một lá bài từ bộ bài tây 52 lá. Xác suất rút được lá Át (có 4 lá Át) là bao nhiêu?",
+    "options": [
+      "1/52",
+      "1/13",
+      "1/4",
+      "4/13"
+    ],
+    "answer": "1/13",
+    "explanation": "4/52 = 1/13."
+  },
+  {
+    "id": "CASTLE_022",
+    "land": "castle",
+    "topic": "Xác suất lý thuyết",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Một hộp có 5 bi đỏ, 3 bi xanh, 2 bi vàng (các bi khác nhau). Lấy ngẫu nhiên một viên. Xác suất lấy được bi xanh là bao nhiêu?",
+    "options": [
+      "3/10",
+      "3/7",
+      "1/3",
+      "3/5"
+    ],
+    "answer": "3/10",
+    "explanation": "Có 3 kết quả thuận lợi trong 10 kết quả có thể."
+  },
+  {
+    "id": "CASTLE_023",
+    "land": "castle",
+    "topic": "Xác suất lý thuyết",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Gieo hai con xúc xắc cân đối. Xác suất để tổng số chấm bằng 7 là bao nhiêu?",
+    "options": [
+      "1/12",
+      "1/6",
+      "1/4",
+      "7/36"
+    ],
+    "answer": "1/6",
+    "explanation": "Có 6 kết quả thuận lợi trong 36: 6/36 = 1/6."
+  },
+  {
+    "id": "CASTLE_024",
+    "land": "castle",
+    "topic": "Xác suất lý thuyết",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Gieo hai đồng xu cân đối. Xác suất để có ít nhất một đồng xu sấp là bao nhiêu?",
+    "options": [
+      "1/4",
+      "1/2",
+      "3/4",
+      "1"
+    ],
+    "answer": "3/4",
+    "explanation": "Có 3 kết quả thuận lợi (SS, SN, NS) trên 4."
+  },
+  {
+    "id": "CASTLE_025",
+    "land": "castle",
+    "topic": "Xác suất thực nghiệm",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Tung một đồng xu 50 lần, thấy 28 lần sấp. Xác suất thực nghiệm của biến cố ‘xuất hiện mặt sấp’ là bao nhiêu?",
+    "options": [
+      "0,5",
+      "0,56",
+      "0,28",
+      "0,44"
+    ],
+    "answer": "0,56",
+    "explanation": "28 : 50 = 0,56."
+  },
+  {
+    "id": "CASTLE_026",
+    "land": "castle",
+    "topic": "Biến cố đối",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Một hộp có 5 bi đỏ, 3 bi xanh, 2 bi vàng. Lấy ngẫu nhiên một viên. Xác suất để KHÔNG lấy được bi đỏ là bao nhiêu?",
+    "options": [
+      "1/2",
+      "1/3",
+      "2/3",
+      "3/10"
+    ],
+    "answer": "1/2",
+    "explanation": "P(đỏ) = 5/10 = 1/2. Xác suất không đỏ = 1 − 1/2 = 1/2."
+  },
+  {
+    "id": "CASTLE_027",
+    "land": "castle",
+    "topic": "Xác suất thực nghiệm",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Một vòng quay may mắn quay 200 lần thì ô đỏ xuất hiện 46 lần. Nếu quay tiếp 1000 lần, dự đoán ô đỏ xuất hiện khoảng bao nhiêu lần?",
+    "options": [
+      "46 lần",
+      "200 lần",
+      "230 lần",
+      "460 lần"
+    ],
+    "answer": "230 lần",
+    "explanation": "Xác suất thực nghiệm = 46 : 200 = 0,23. Dự đoán: 0,23 × 1000 = 230."
+  },
+  {
+    "id": "CASTLE_028",
+    "land": "castle",
+    "topic": "Xác suất lý thuyết",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Chọn ngẫu nhiên một số từ tập {1, 2, …, 20}. Xác suất để số đó chia hết cho 5 là bao nhiêu?",
+    "options": [
+      "1/5",
+      "1/4",
+      "1/20",
+      "4/5"
+    ],
+    "answer": "1/5",
+    "explanation": "Có 4 số (5, 10, 15, 20): 4/20 = 1/5."
+  },
+  {
+    "id": "CASTLE_029",
+    "land": "castle",
+    "topic": "Xác suất lý thuyết",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Gieo một con xúc xắc cân đối hai lần. Xác suất để hai lần gieo cho số chấm giống nhau là bao nhiêu?",
+    "options": [
+      "1/36",
+      "1/12",
+      "1/6",
+      "1/3"
+    ],
+    "answer": "1/6",
+    "explanation": "Có 6 kết quả thuận lợi trong 36: 6/36 = 1/6."
+  },
+  {
+    "id": "CASTLE_030",
+    "land": "castle",
+    "topic": "Biến cố đối",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Một nhà máy có xác suất sản phẩm đạt chuẩn là 0,92. Trong 500 sản phẩm, dự kiến có khoảng bao nhiêu sản phẩm KHÔNG đạt chuẩn?",
+    "options": [
+      "8",
+      "40",
+      "460",
+      "92"
+    ],
+    "answer": "40",
+    "explanation": "Xác suất không đạt = 1 − 0,92 = 0,08. Số sản phẩm dự kiến = 0,08 × 500 = 40."
+  }
+]

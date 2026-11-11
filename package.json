@@ -1,0 +1,8 @@
+{
+  "name": "mathoria",
+  "version": "2.0.0",
+  "private": true,
+  "description": "MATHORIA – STAT & PROB ADVENTURE (kèm trợ lý AI)",
+  "scripts": { "start": "node server/server.js" },
+  "engines": { "node": ">=18" }
+}

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thung Lũng Biến Thiên · MATHORIA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050f0d;--card:#0a1d19;--line:#17423a;--g1:#34d399;--g2:#0f9f78;--sun:#ffd37a;--txt:#e6f7ef;--dim:#8fc2b0;--coral:#ff8a73}
+*{box-sizing:border-box;margin:0}
+body{font-family:Nunito,system-ui,sans-serif;color:var(--txt);line-height:1.6;min-height:100vh;background:var(--bg)}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:16px max(24px,calc((100% - 1000px)/2));border-bottom:1px solid #ffffff12;background:#04120f}
+.top strong{font-size:19px;font-weight:900;letter-spacing:.5px}
+.chip{padding:7px 16px;border-radius:99px;border:1px solid var(--line);color:#b9e6d6;font-size:14px;font-weight:700}
+.chip b{color:var(--sun)}
+.hero{text-align:center;padding:42px 20px 48px;background:radial-gradient(600px 260px at 50% 0%,#18a57a55,transparent 70%),linear-gradient(180deg,#0a3a2e,#071a16 70%,var(--bg))}
+.back{display:inline-flex;align-items:center;gap:8px;padding:9px 20px;border-radius:99px;color:#fff;text-decoration:none;font-weight:800;font-size:15px;background:#ffffff17;border:1px solid #ffffff40;backdrop-filter:blur(8px);box-shadow:0 4px 16px #0004;transition:transform .2s,border-color .2s}
+.back:hover{transform:translateY(-2px);border-color:var(--g1)}
+.pill{display:table;margin:16px auto 0;padding:5px 16px;border-radius:99px;border:1px solid #34d39966;background:#0f9f7822;color:var(--g1);font-weight:800;font-size:13px;letter-spacing:.4px}
+h1{margin-top:18px;font-size:clamp(34px,6vw,54px);line-height:1.1;font-weight:900}
+h1 .em{display:inline-block;animation:sway 4s ease-in-out infinite;transform-origin:50% 90%}
+@keyframes sway{50%{transform:rotate(-8deg) translateY(-3px)}}
+.sub{margin:14px auto 0;max-width:52ch;color:var(--dim);font-size:17px}
+main{max-width:880px;margin:0 auto;padding:0 20px 20px}
+.tabs{display:flex;gap:10px;margin:-6px 0 18px;flex-wrap:wrap}
+.tab{padding:13px 22px;border-radius:14px;border:1px solid var(--line);background:#07211c;color:var(--txt);font-weight:800;font-size:16px;transition:border-color .2s}
+.tab:hover{border-color:var(--g1)}
+.tab[aria-selected=true]{background:linear-gradient(135deg,var(--g1),var(--g2));border-color:transparent;color:#04201a;box-shadow:0 6px 22px #0f9f7855}
+.panel[hidden]{display:none}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.stack{display:grid;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+.card h3{font-size:21px;font-weight:800;margin-bottom:8px}
+.card p{color:#cfe9df}
+.tag{font-size:13px;font-weight:800;color:var(--g1);margin-bottom:2px}
+.f{margin:14px 0;padding:14px;border:1px dashed #2f7d6b;border-radius:12px;background:#030c0a;color:var(--sun);font-family:Consolas,monospace;font-weight:700;text-align:center;overflow-x:auto}
+.ex{padding:11px 14px;border-left:4px solid var(--g1);background:#ffffff0b;border-radius:0 12px 12px 0;font-size:15px;margin-top:10px}
+.wide{grid-column:1/-1}
+label{font-weight:700;display:block;margin:12px 0 6px;color:var(--dim)}
+input[type=text]{width:100%;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:#030c0a;color:#fff;font:inherit;font-size:16px}
+input::placeholder{color:#527a6d}
+input.ok{border-color:var(--g1);background:#0b3a2e}
+input.no{border-color:var(--coral);background:#2e1717}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.btn{padding:12px 20px;border-radius:12px;border:1px solid var(--line);background:#0d2e27;color:var(--txt);font-weight:800}
+.btn:hover{border-color:var(--g1)}
+.btn.main{background:linear-gradient(135deg,var(--g1),var(--g2));color:#04201a;border-color:transparent}
+.btn.fill{flex:1}
+.res{margin-top:6px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:#030c0a}
+.res.err{border-color:var(--coral);color:#ffd1c8}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.stats div{background:#0a1d19;border:1px solid var(--line);border-radius:12px;padding:8px 12px}
+.stats small{display:block;color:var(--dim);font-weight:700;font-size:12px}
+.stats b{font-size:20px;color:var(--sun)}
+.chart{position:relative;height:230px;display:flex;align-items:flex-end;gap:6px;padding:0 6px;border-bottom:2px solid #2f7d6b;margin-top:28px}
+.chart .b{flex:1;min-width:6px;border-radius:8px 8px 0 0;background:linear-gradient(var(--g1),#1d8a6c);position:relative}
+.chart .b.out{background:linear-gradient(var(--coral),#c4503c)}
+.chart .b span{position:absolute;top:-22px;left:50%;transform:translateX(-50%);font-size:12px;font-weight:800}
+.band{position:absolute;left:0;right:0;background:#ffd37a22;border-top:1px dashed var(--sun);border-bottom:1px dashed var(--sun);pointer-events:none}
+.mean{position:absolute;left:0;right:0;border-top:2px solid var(--sun);pointer-events:none}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--dim);margin-top:10px;font-weight:700}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{padding:8px 10px;text-align:center;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left;color:var(--dim)}
+td b{color:var(--sun)}
+.verdict{margin-top:12px;font-weight:800;color:var(--g1)}
+.qq h4{font-size:17px;margin:22px 0 8px}
+.fb{font-size:14px;margin-top:6px;min-height:20px}
+.fb.g{color:var(--g1)}.fb.r{color:#ffb4a6}
+.win{display:none;margin-top:6px;padding:16px;border-radius:14px;border:1px solid var(--sun);background:#2a2a10;color:var(--sun);font-weight:800}
+.win.on{display:block}
+.win a{display:inline-block;margin-left:8px;color:#fff;text-decoration:none;padding:6px 14px;border-radius:99px;border:1px solid #fff6}
+footer{text-align:center;color:var(--dim);padding:30px 0 40px;font-size:14px}
+@media(max-width:720px){.grid,.two{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.chart{height:190px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.math{font-family:"Cambria Math","STIX Two Math","Times New Roman",serif;font-style:italic;font-weight:500;font-size:1.3em;letter-spacing:.3px}
+.math sub,.math sup{font-size:.65em;line-height:0}
+.xbar{display:inline-block;border-top:.09em solid currentColor;line-height:1;padding:0 .05em}
+.rad{border-top:.09em solid currentColor;padding:0 .12em;margin-left:.04em}
+.frac{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;margin:0 .35em;line-height:1.35}
+.frac>span:first-child{padding:0 .45em .12em;border-bottom:.09em solid currentColor}
+.frac>span:last-child{padding:.12em .45em 0}
+.formula-note{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:8px;font-size:15px;line-height:1.5;color:#cfe9df}
+.formula-note li{padding-left:14px;border-left:3px solid rgba(255,255,255,.18)}
+.formula-note .math{font-size:1.15em;margin-right:4px}
+:root{--ia:var(--g1);--ib:var(--sun);--ic:var(--coral);--idim:var(--dim);--iline:#17423a;--ion:#04201a}
+/* ===== Hình minh hoạ phần lý thuyết (đồng bộ với 3 vùng đất còn lại) ===== */
+.il{margin:12px 0 6px;padding:12px 12px 8px;border-radius:14px;background:rgba(0,0,0,.28);border:1px solid var(--iline)}
+.il svg{display:block;width:100%;height:auto;overflow:visible}
+.wide>.il{max-width:380px;margin-left:auto;margin-right:auto}
+.il text{font:700 11px Nunito,system-ui,sans-serif;fill:var(--idim)}
+.il .t-a{fill:var(--ia)}.il .t-b{fill:var(--ib)}.il .t-c{fill:var(--ic)}
+.il .cap{margin:6px 0 2px;font-size:.88rem;line-height:1.5;color:var(--idim);text-align:center}
+.il .cap b{color:var(--ib)}
+.il-chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.il-chips span{min-width:36px;padding:6px 9px;border-radius:9px;text-align:center;font-weight:800;background:rgba(255,255,255,.06);border:1px solid var(--iline);color:inherit}
+.il-chips .hit{background:var(--ia);border-color:transparent;color:var(--ion);box-shadow:0 4px 14px color-mix(in srgb,var(--ia) 40%,transparent)}
+.il-chips .mid{background:var(--ib);border-color:transparent;color:#2a1c00}
+.il-tbl{width:100%;border-collapse:collapse;font-size:.92rem}
+.il-tbl th,.il-tbl td{padding:5px 8px;text-align:center;border-bottom:1px solid var(--iline)}
+.il-tbl th{color:var(--idim);font-weight:700}.il-tbl tr:last-child td{border-bottom:0;color:var(--ib);font-weight:800}
+.il-bar{display:flex;height:26px;border-radius:99px;overflow:hidden;border:1px solid var(--iline)}
+.il-bar i{display:block;height:100%}
+.il-key{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:8px;font-size:.84rem;color:var(--idim);font-weight:700}
+.il-key b{color:var(--ib)}
+.il-waffle{display:grid;grid-template-columns:repeat(10,1fr);gap:4px;max-width:300px;margin:0 auto}
+.il-waffle i{aspect-ratio:1;border-radius:5px;background:rgba(255,255,255,.08)}
+.il-waffle i.on{background:var(--ia);box-shadow:0 0 8px color-mix(in srgb,var(--ia) 55%,transparent)}
+.il-pair{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:420px){.il-pair{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="top"><strong>MATHORIA</strong><span class="chip">Nhà thám hiểm · <b id="gems">0</b> ✦</span></header>
+
+<section class="hero">
+  <a class="back" href="index.html#world">← Về bản đồ</a>
+  <span class="pill">VÙNG ĐẤT 02 · THỐNG KÊ</span>
+  <h1><span class="em">🌿</span> Thung Lũng Biến Thiên</h1>
+  <p class="sub">Hai bộ dữ liệu có cùng trung bình vẫn có thể rất khác nhau. Hãy đo độ trải rộng của dữ liệu để biết thung lũng nào hẹp, thung lũng nào lởm chởm.</p>
+</section>
+
+<main>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-t="kt">📚 Thư viện kiến thức</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="lab">🧪 Phòng thí nghiệm</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="tt">🗝️ Mở cánh cổng</button>
+  </div>
+
+  <section class="panel grid" id="kt">
+    <article class="card"><div class="tag">Bài học 1</div><h3>Khoảng biến thiên</h3>
+      <p>Khoảng cách giữa giá trị lớn nhất và nhỏ nhất. Dễ tính nhưng chỉ dựa vào hai giá trị ở hai đầu.</p>
+      <div class="f"><span class="math">R = x<sub>max</sub> − x<sub>min</sub></span></div>
+      <ul class="formula-note"><li><span class="math">R</span>: Khoảng biến thiên.</li><li><span class="math">x<sub>max</sub>, x<sub>min</sub></span>: Giá trị lớn nhất và nhỏ nhất của bộ dữ liệu.</li></ul>
+      <div class="il" role="img" aria-label="Trục số với năm giá trị 5, 7, 8, 9, 11; khoảng biến thiên bằng 11 trừ 5 bằng 6"><svg viewBox="0 0 240 78"><line x1="14" y1="44" x2="226" y2="44" stroke="#2f7d6b" stroke-width="2"/><path d="M30 28v-8h180v8" fill="none" stroke="var(--sun)" stroke-width="2"/><text x="120" y="12" text-anchor="middle" class="t-b">R = 11 − 5 = 6</text><circle cx="30" cy="44" r="6" fill="var(--g1)"/><circle cx="90" cy="44" r="6" fill="var(--g1)"/><circle cx="120" cy="44" r="6" fill="var(--g1)"/><circle cx="150" cy="44" r="6" fill="var(--g1)"/><circle cx="210" cy="44" r="6" fill="var(--coral)"/><text x="30" y="68" text-anchor="middle">5</text><text x="90" y="68" text-anchor="middle">7</text><text x="120" y="68" text-anchor="middle">8</text><text x="150" y="68" text-anchor="middle">9</text><text x="210" y="68" text-anchor="middle">11</text></svg><p class="cap">Chỉ hai giá trị ở <b>hai đầu</b> (nhỏ nhất và lớn nhất) quyết định R.</p></div><div class="ex"><b>Ví dụ:</b> 5, 7, 8, 9, 11 có R = 11 − 5 = 6.</div></article>
+    <article class="card"><div class="tag">Bài học 2</div><h3>Khoảng tứ phân vị</h3>
+      <p>Chiều rộng của nửa dữ liệu ở giữa, nên ít bị ảnh hưởng bởi giá trị quá lớn hoặc quá nhỏ.</p>
+      <div class="f"><span class="math">Δ<sub>Q</sub> = Q<sub>3</sub> − Q<sub>1</sub></span></div>
+      <ul class="formula-note"><li><span class="math">Δ<sub>Q</sub></span>: Khoảng tứ phân vị.</li><li><span class="math">Q<sub>1</sub></span>: Tứ phân vị thứ nhất (trung vị của nửa dưới).</li><li><span class="math">Q<sub>3</sub></span>: Tứ phân vị thứ ba (trung vị của nửa trên).</li></ul>
+      <div class="il" role="img" aria-label="Hộp tứ phân vị của dãy 2, 4, 5, 7, 8, 10, 12 với Q1 bằng 4, trung vị 7, Q3 bằng 10"><div class="il-chips"><span>2</span><span class="hit">4</span><span>5</span><span class="mid">7</span><span>8</span><span class="hit">10</span><span>12</span></div><svg viewBox="0 0 240 92" style="margin-top:10px"><line x1="20" y1="34" x2="60" y2="34" stroke="#8fc2b0" stroke-width="2"/><line x1="180" y1="34" x2="220" y2="34" stroke="#8fc2b0" stroke-width="2"/><rect x="60" y="16" width="120" height="36" rx="6" fill="#34d39933" stroke="var(--g1)" stroke-width="2"/><line x1="120" y1="16" x2="120" y2="52" stroke="var(--sun)" stroke-width="3"/><path d="M60 62v6h120v-6" fill="none" stroke="var(--sun)" stroke-width="2"/><text x="120" y="82" text-anchor="middle" class="t-b">ΔQ = 10 − 4 = 6</text><text x="60" y="10" text-anchor="middle" class="t-a">Q₁ = 4</text><text x="120" y="10" text-anchor="middle" class="t-b">Trung vị 7</text><text x="180" y="10" text-anchor="middle" class="t-a">Q₃ = 10</text></svg><p class="cap">Hộp xanh chứa <b>nửa dữ liệu ở giữa</b>; hai đầu mút nằm ngoài hộp không làm ΔQ đổi.</p></div><div class="ex"><b>Cách tìm:</b> Sắp xếp dữ liệu, chia làm hai nửa. Q₁ là trung vị nửa dưới, Q₃ là trung vị nửa trên (bỏ trung vị nếu n lẻ).</div></article>
+    <article class="card"><div class="tag">Bài học 3</div><h3>Phương sai</h3>
+      <p>Trung bình của bình phương độ lệch so với số trung bình. Dữ liệu càng phân tán, phương sai càng lớn.</p>
+      <div class="f"><span class="math">σ<sup>2</sup> = <span class="frac"><span>(x<sub>1</sub> − <span class="xbar">x</span>)<sup>2</sup> + … + (x<sub>n</sub> − <span class="xbar">x</span>)<sup>2</sup></span><span>n</span></span></span></div>
+      <ul class="formula-note"><li><span class="math">σ<sup>2</sup></span>: Phương sai.</li><li><span class="math">x<sub>1</sub>, …, x<sub>n</sub></span>: Các giá trị của bộ dữ liệu.</li><li><span class="math"><span class="xbar">x</span></span>: Số trung bình cộng.</li><li><span class="math">n</span>: Số giá trị (cỡ mẫu).</li></ul>
+      <div class="il"><table class="il-tbl" aria-label="Bảng tính phương sai của 2, 4, 6, 8"><tr><th>x</th><th>x − x̄ (x̄ = 5)</th><th>(x − x̄)²</th></tr><tr><td>2</td><td>−3</td><td>9</td></tr><tr><td>4</td><td>−1</td><td>1</td></tr><tr><td>6</td><td>1</td><td>1</td></tr><tr><td>8</td><td>3</td><td>9</td></tr><tr><td colspan="2">Tổng = 20, chia n = 4</td><td>σ² = 5</td></tr></table><p class="cap">Bình phương để <b>độ lệch âm và dương không triệt tiêu nhau</b>.</p></div><div class="ex"><b>Gợi ý:</b> Tính x̄ trước, rồi lấy từng giá trị trừ x̄, bình phương, cộng lại và chia cho n.<br><b>Quy ước:</b> ở đây phương sai tính cho cả bộ dữ liệu nên chia cho n (không chia cho n − 1).</div></article>
+    <article class="card"><div class="tag">Bài học 4</div><h3>Độ lệch chuẩn</h3>
+      <p>Căn bậc hai của phương sai. Cùng đơn vị với dữ liệu nên dễ diễn giải hơn phương sai.</p>
+      <div class="f"><span class="math">σ = √<span class="rad">σ<sup>2</sup></span></span></div>
+      <ul class="formula-note"><li><span class="math">σ</span>: Độ lệch chuẩn.</li><li><span class="math">σ<sup>2</sup></span>: Phương sai.</li></ul>
+      <div class="il" role="img" aria-label="Các điểm 2, 4, 6, 8 quanh trung bình 5, vùng độ lệch chuẩn từ 2,76 đến 7,24"><svg viewBox="0 0 260 74"><rect x="80.7" y="16" width="98.6" height="32" rx="8" fill="#ffd37a22" stroke="var(--sun)" stroke-dasharray="4 3"/><line x1="14" y1="32" x2="246" y2="32" stroke="#2f7d6b" stroke-width="2"/><line x1="130" y1="10" x2="130" y2="54" stroke="var(--sun)" stroke-width="2.5"/><circle cx="64" cy="32" r="6" fill="var(--g1)"/><circle cx="108" cy="32" r="6" fill="var(--g1)"/><circle cx="152" cy="32" r="6" fill="var(--g1)"/><circle cx="196" cy="32" r="6" fill="var(--g1)"/><text x="64" y="68" text-anchor="middle">2</text><text x="108" y="68" text-anchor="middle">4</text><text x="152" y="68" text-anchor="middle">6</text><text x="196" y="68" text-anchor="middle">8</text><text x="130" y="7" text-anchor="middle" class="t-b">x̄ = 5</text></svg><p class="cap">σ = √5 ≈ 2,24. Vùng vàng là <b>x̄ ± σ</b>: dữ liệu càng tập trung, vùng càng hẹp.</p></div><div class="ex"><b>Ví dụ:</b> σ² = 16 thì σ = 4.</div></article>
+    <article class="card wide"><div class="tag">Ứng dụng thực tế</div><h3>Chọn đội ổn định</h3>
+      <p>Hai đội cùng điểm trung bình 7, nhưng đội A luôn được 7 còn đội B lúc 4 lúc 10. Đội có độ lệch chuẩn nhỏ hơn thì kết quả đồng đều hơn. Khi có giá trị ngoại lệ, khoảng tứ phân vị cho bức tranh đáng tin hơn khoảng biến thiên.</p><div class="il" role="img" aria-label="Đội A luôn được 7 điểm, đội B được 4, 4, 7, 10, 10; cùng trung bình 7"><svg viewBox="0 0 240 118"><path d="M130 22V58M130 76V112" stroke="var(--sun)" stroke-width="2" stroke-dasharray="4 3" fill="none"/><line x1="14" y1="40" x2="226" y2="40" stroke="#2f7d6b"/><line x1="14" y1="96" x2="226" y2="96" stroke="#2f7d6b"/><circle cx="130" cy="40" r="5.5" fill="var(--g1)"/><circle cx="130" cy="40" r="5.5" fill="var(--g1)"/><circle cx="130" cy="40" r="5.5" fill="var(--g1)"/><circle cx="130" cy="40" r="5.5" fill="var(--g1)"/><circle cx="130" cy="40" r="5.5" fill="var(--g1)"/><circle cx="55" cy="96" r="5.5" fill="var(--coral)"/><circle cx="55" cy="83" r="5.5" fill="var(--coral)"/><circle cx="130" cy="96" r="5.5" fill="var(--coral)"/><circle cx="205" cy="96" r="5.5" fill="var(--coral)"/><circle cx="205" cy="83" r="5.5" fill="var(--coral)"/><text x="14" y="16" class="t-a">Đội A: 7, 7, 7, 7, 7 → σ = 0</text><text x="14" y="72" class="t-c">Đội B: 4, 4, 7, 10, 10 → σ ≈ 2,68</text></svg><p class="cap">Cùng trung bình <b>7</b> (đường vàng) nhưng đội B dao động mạnh hơn nên kém ổn định.</p></div></article>
+  </section>
+
+  <section class="panel stack" id="lab" hidden>
+    <article class="card">
+      <h3>📊 Phân tích bộ dữ liệu</h3>
+      <label for="inp">Nhập các số cách nhau bằng dấu phẩy hoặc dấu cách</label>
+      <input id="inp" type="text" value="5, 7, 8, 9, 11" autocomplete="off">
+      <div class="row"><button class="btn main fill" id="go">Phân tích dữ liệu</button><button class="btn fill" id="sample">Dùng dữ liệu mẫu</button></div>
+      <div class="res" id="out">Nhập dữ liệu rồi nhấn “Phân tích dữ liệu”.</div>
+      <div id="chartBox" hidden>
+        <div class="chart" id="chart" aria-label="Biểu đồ cột của dữ liệu"></div>
+        <div class="legend"><span style="color:var(--sun)">— Số trung bình</span><span>Vùng vàng: x̄ ± σ</span><span style="color:var(--coral)">Cột đỏ: giá trị ngoại lệ</span></div>
+      </div>
+    </article>
+    <article class="card">
+      <h3>⚖️ So sánh hai bộ dữ liệu</h3>
+      <div class="two">
+        <div><label for="da">Bộ dữ liệu A</label><input id="da" type="text" value="7, 8, 9, 10, 11" autocomplete="off"></div>
+        <div><label for="db">Bộ dữ liệu B</label><input id="db" type="text" value="3, 7, 9, 11, 15" autocomplete="off"></div>
+      </div>
+      <div class="row"><button class="btn main" id="cmp">So sánh độ phân tán</button></div>
+      <div class="res" id="cout">Hãy so sánh hai bộ dữ liệu.</div>
+    </article>
+  </section>
+
+  <section class="panel" id="tt" hidden>
+    <article class="card qq">
+      <h3>🗝️ Cánh cổng thung lũng</h3>
+      <div id="quizMount"></div>
+      <div class="win" id="win">🏆 Chúc mừng! Bạn đã nhận pha lê của Thung Lũng Biến Thiên.<a href="index.html#world">Về bản đồ</a></div>
+    </article>
+  </section>
+</main>
+<footer>✦ Mỗi dữ liệu là một mảnh ghép. Mỗi phép tính là một bước tiến! ✦</footer>
+
+<script src="data/questions-bundle.js"></script>
+<script src="js/quiz-engine.js"></script>
+<script src="js/quiz-widget.js"></script>
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const KEY='mathoria:variation';
+let st={ok:[false,false,false],done:false};
+try{st=Object.assign(st,JSON.parse(localStorage.getItem(KEY)))}catch(e){}
+
+const save=()=>{
+  try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}
+  if(st.done){
+    try{
+      const L='mathoria-completed-lands';
+      const g=JSON.parse(localStorage.getItem(L)||'[]');
+      if(!g.includes('variation')){g.push('variation');localStorage.setItem(L,JSON.stringify(g));}
+    }catch(e){}
+  }
+};
+if(st.done) save();
+const fmt=x=>String(+x.toFixed(2)).replace('.',',');
+
+$$('.tab').forEach(b=>b.onclick=()=>{
+  $$('.tab').forEach(t=>t.setAttribute('aria-selected',t===b));
+  $$('.panel').forEach(p=>p.hidden=p.id!==b.dataset.t);
+});
+
+/* ---- Thống kê ---- */
+const med=a=>{const n=a.length,m=n>>1;return n%2?a[m]:(a[m-1]+a[m])/2};
+function analyze(arr){
+  const s=[...arr].sort((a,b)=>a-b),n=s.length,h=n>>1,mean=s.reduce((a,b)=>a+b,0)/n;
+  const q1=med(s.slice(0,h)),q3=med(s.slice(n-h)),iqr=q3-q1,v=s.reduce((a,x)=>a+(x-mean)**2,0)/n;
+  return {n,mean,median:med(s),min:s[0],max:s[n-1],R:s[n-1]-s[0],q1,q3,iqr,v,sd:Math.sqrt(v),lo:q1-1.5*iqr,hi:q3+1.5*iqr};
+}
+function parse(str){
+  const nums=str.split(/[\s;]+|,\s*/).filter(Boolean).map(Number);
+  return nums.length>=2&&nums.length<=20&&nums.every(x=>!isNaN(x))?nums:null;
+}
+const BAD='Hãy nhập từ 2 đến 20 số hợp lệ, ví dụ: 5, 7, 8, 9, 11 (số thập phân dùng dấu chấm).';
+function run(){
+  const out=$('#out'),d=parse($('#inp').value);
+  if(!d){out.className='res err';out.textContent=BAD;$('#chartBox').hidden=true;return}
+  out.className='res';
+  const A=analyze(d);
+  out.innerHTML='<div class="stats">'+[['Số trung bình',A.mean],['Trung vị',A.median],['Khoảng biến thiên',A.R],['Khoảng tứ phân vị',A.iqr],['Phương sai σ²',A.v],['Độ lệch chuẩn σ',A.sd]]
+    .map(([k,v])=>`<div><small>${k}</small><b>${fmt(v)}</b></div>`).join('')+'</div>';
+  const lo=Math.min(0,A.min),hi=Math.max(0,A.max),sp=(hi-lo)||1,pc=x=>(x-lo)/sp*100;
+  const b0=Math.max(pc(A.mean-A.sd),0),b1=Math.min(pc(A.mean+A.sd),100);
+  $('#chart').innerHTML=`<div class="band" style="bottom:${b0}%;height:${Math.max(b1-b0,.6)}%"></div><div class="mean" style="bottom:${pc(A.mean)}%"></div>`+
+    d.map(x=>`<div class="b${x<A.lo||x>A.hi?' out':''}" style="height:${Math.max(pc(x),2)}%"><span>${fmt(x)}</span></div>`).join('');
+  $('#chartBox').hidden=false;
+}
+$('#go').onclick=run;
+$('#sample').onclick=()=>{$('#inp').value='2, 4, 4, 5, 7, 9, 30';run()};
+$('#inp').addEventListener('keydown',e=>{if(e.key==='Enter')run()});
+
+function compare(){
+  const out=$('#cout'),a=parse($('#da').value),b=parse($('#db').value);
+  if(!a||!b){out.className='res err';out.textContent=BAD;return}
+  out.className='res';
+  const A=analyze(a),B=analyze(b);
+  const rows=[['Số trung bình','mean'],['Khoảng biến thiên','R'],['Khoảng tứ phân vị','iqr'],['Phương sai σ²','v'],['Độ lệch chuẩn σ','sd']];
+  const t='<table><tr><th></th><th>Bộ A</th><th>Bộ B</th></tr>'+rows.map(([k,p])=>`<tr><td>${k}</td><td><b>${fmt(A[p])}</b></td><td><b>${fmt(B[p])}</b></td></tr>`).join('')+'</table>';
+  let v=Math.abs(A.sd-B.sd)<1e-9?'Hai bộ dữ liệu có độ phân tán như nhau.'
+    :`Bộ ${A.sd<B.sd?'A':'B'} ổn định hơn vì độ lệch chuẩn nhỏ hơn (dữ liệu tập trung quanh trung bình hơn).`;
+  if(Math.abs(A.mean-B.mean)>1e-9)v+=' Hai trung bình khác nhau nên đây chỉ là so sánh sơ bộ.';
+  out.innerHTML=t+`<p class="verdict">${v}</p>`;
+}
+$('#cmp').onclick=compare;
+
+/* ---- Cánh cổng (câu hỏi random từ ngân hàng 30 câu) ---- */
+function refresh(){
+  $('#gems').textContent=st.done?1:0;
+  $('#win').classList.toggle('on',st.done);
+}
+MathoriaQuizWidget.mount({
+  container:'#quizMount',
+  land:'variation',
+  alreadyEarned:()=>st.done,
+  passMessage:'Bạn nhận được pha lê của Thung Lũng Biến Thiên.',
+  onPass:()=>{st.done=true;save();refresh();},
+  theme:{card:'rgba(255,255,255,.05)',onAccent:'#04201a',text:'var(--txt)',muted:'var(--dim)',line:'var(--line)',accent:'var(--g1)',accent2:'var(--g2)',ok:'var(--g1)',bad:'var(--coral)',gold:'var(--sun)'}
+});
+refresh();
+</script>
+  <script src="js/ai-context.js"></script>
+  <script src="js/ai-assistant.js"></script>
+</body>
+</html>

@@ -1,0 +1,482 @@
+[
+  {
+    "id": "OCEAN_001",
+    "land": "ocean",
+    "topic": "Phép thử ngẫu nhiên",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Phép thử ngẫu nhiên là phép thử có đặc điểm nào sau đây?",
+    "options": [
+      "Không đoán trước được kết quả nhưng biết tập hợp tất cả các kết quả có thể xảy ra",
+      "Luôn biết chắc kết quả",
+      "Chỉ có một kết quả duy nhất",
+      "Không thể lặp lại"
+    ],
+    "answer": "Không đoán trước được kết quả nhưng biết tập hợp tất cả các kết quả có thể xảy ra",
+    "explanation": "Đó là định nghĩa phép thử ngẫu nhiên."
+  },
+  {
+    "id": "OCEAN_002",
+    "land": "ocean",
+    "topic": "Không gian mẫu",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Không gian mẫu của một phép thử là gì?",
+    "options": [
+      "Tập hợp tất cả các kết quả có thể xảy ra của phép thử",
+      "Kết quả xảy ra nhiều nhất",
+      "Số lần thực hiện phép thử",
+      "Kết quả đầu tiên của phép thử"
+    ],
+    "answer": "Tập hợp tất cả các kết quả có thể xảy ra của phép thử",
+    "explanation": "Không gian mẫu thường kí hiệu là Ω."
+  },
+  {
+    "id": "OCEAN_003",
+    "land": "ocean",
+    "topic": "Không gian mẫu",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Gieo một đồng xu cân đối. Không gian mẫu gồm bao nhiêu phần tử?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "2",
+    "explanation": "Có hai kết quả: sấp (S) và ngửa (N)."
+  },
+  {
+    "id": "OCEAN_004",
+    "land": "ocean",
+    "topic": "Không gian mẫu",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Gieo một con xúc xắc 6 mặt. Không gian mẫu gồm bao nhiêu phần tử?",
+    "options": [
+      "3",
+      "4",
+      "6",
+      "12"
+    ],
+    "answer": "6",
+    "explanation": "Các kết quả: 1, 2, 3, 4, 5, 6."
+  },
+  {
+    "id": "OCEAN_005",
+    "land": "ocean",
+    "topic": "Biến cố",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Biến cố của một phép thử là gì?",
+    "options": [
+      "Tập con của không gian mẫu",
+      "Không gian mẫu",
+      "Số lần thực hiện phép thử",
+      "Một số thực bất kì"
+    ],
+    "answer": "Tập con của không gian mẫu",
+    "explanation": "Biến cố là tập hợp các kết quả của phép thử thỏa mãn một điều kiện nào đó."
+  },
+  {
+    "id": "OCEAN_006",
+    "land": "ocean",
+    "topic": "Biến cố",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Biến cố luôn xảy ra khi thực hiện phép thử được gọi là gì?",
+    "options": [
+      "Biến cố chắc chắn",
+      "Biến cố không thể",
+      "Biến cố ngẫu nhiên",
+      "Biến cố đối"
+    ],
+    "answer": "Biến cố chắc chắn",
+    "explanation": "Biến cố chắc chắn trùng với không gian mẫu."
+  },
+  {
+    "id": "OCEAN_007",
+    "land": "ocean",
+    "topic": "Biến cố",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Gieo một con xúc xắc 6 mặt. Biến cố ‘xuất hiện mặt 7 chấm’ là biến cố gì?",
+    "options": [
+      "Biến cố không thể",
+      "Biến cố chắc chắn",
+      "Biến cố có xác suất 1/2",
+      "Biến cố đối của mặt 6 chấm"
+    ],
+    "answer": "Biến cố không thể",
+    "explanation": "Xúc xắc không có mặt 7 chấm nên biến cố này không bao giờ xảy ra."
+  },
+  {
+    "id": "OCEAN_008",
+    "land": "ocean",
+    "topic": "Không gian mẫu",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Gieo hai đồng xu cân đối. Không gian mẫu gồm bao nhiêu phần tử?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "6"
+    ],
+    "answer": "4",
+    "explanation": "SS, SN, NS, NN."
+  },
+  {
+    "id": "OCEAN_009",
+    "land": "ocean",
+    "topic": "Không gian mẫu",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Rút ngẫu nhiên một lá bài từ bộ bài tây 52 lá. Không gian mẫu có bao nhiêu phần tử?",
+    "options": [
+      "13",
+      "26",
+      "52",
+      "54"
+    ],
+    "answer": "52",
+    "explanation": "Mỗi lá bài là một kết quả có thể."
+  },
+  {
+    "id": "OCEAN_010",
+    "land": "ocean",
+    "topic": "Phép thử ngẫu nhiên",
+    "level": "recognition",
+    "type": "multiple_choice",
+    "question": "Phép thử nào sau đây là phép thử ngẫu nhiên?",
+    "options": [
+      "Gieo một con xúc xắc và quan sát số chấm",
+      "Tính 2 + 3",
+      "Đun nước ở 100°C (áp suất chuẩn) và quan sát nước sôi",
+      "Thả viên đá từ tay xuống đất"
+    ],
+    "answer": "Gieo một con xúc xắc và quan sát số chấm",
+    "explanation": "Chỉ khi gieo xúc xắc ta không đoán trước được kết quả; các phép còn lại có kết quả hoàn toàn xác định."
+  },
+  {
+    "id": "OCEAN_011",
+    "land": "ocean",
+    "topic": "Biến cố",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Gieo hai đồng xu cân đối. Biến cố ‘có đúng một đồng xu sấp’ gồm bao nhiêu kết quả?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "2",
+    "explanation": "Gồm SN và NS."
+  },
+  {
+    "id": "OCEAN_012",
+    "land": "ocean",
+    "topic": "Biến cố",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Gieo một con xúc xắc. Biến cố ‘xuất hiện mặt có số chấm chẵn’ gồm bao nhiêu kết quả?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "6"
+    ],
+    "answer": "3",
+    "explanation": "Gồm các kết quả 2, 4, 6."
+  },
+  {
+    "id": "OCEAN_013",
+    "land": "ocean",
+    "topic": "Không gian mẫu",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Gieo hai con xúc xắc 6 mặt. Không gian mẫu có bao nhiêu phần tử?",
+    "options": [
+      "12",
+      "24",
+      "36",
+      "66"
+    ],
+    "answer": "36",
+    "explanation": "6 · 6 = 36 cặp kết quả."
+  },
+  {
+    "id": "OCEAN_014",
+    "land": "ocean",
+    "topic": "Biến cố",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Gieo một con xúc xắc. Biến cố ‘số chấm lớn hơn 4’ gồm bao nhiêu kết quả?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "2",
+    "explanation": "Gồm các kết quả 5 và 6."
+  },
+  {
+    "id": "OCEAN_015",
+    "land": "ocean",
+    "topic": "Biến cố",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Gieo hai con xúc xắc. Biến cố ‘tổng số chấm bằng 7’ có bao nhiêu kết quả thuận lợi?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answer": "6",
+    "explanation": "(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)."
+  },
+  {
+    "id": "OCEAN_016",
+    "land": "ocean",
+    "topic": "Biến cố",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Gieo một con xúc xắc. Biến cố ‘số chấm nhỏ hơn 7’ là biến cố gì?",
+    "options": [
+      "Biến cố chắc chắn",
+      "Biến cố không thể",
+      "Biến cố có 5 kết quả thuận lợi",
+      "Biến cố có 3 kết quả thuận lợi"
+    ],
+    "answer": "Biến cố chắc chắn",
+    "explanation": "Mọi kết quả (1 đến 6) đều nhỏ hơn 7 nên biến cố luôn xảy ra."
+  },
+  {
+    "id": "OCEAN_017",
+    "land": "ocean",
+    "topic": "Biến cố",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Hộp có 3 viên bi đỏ và 2 viên bi xanh. Lấy ngẫu nhiên một viên. Biến cố ‘lấy được bi vàng’ là biến cố gì?",
+    "options": [
+      "Biến cố không thể",
+      "Biến cố chắc chắn",
+      "Biến cố có thể xảy ra",
+      "Biến cố có xác suất 1/5"
+    ],
+    "answer": "Biến cố không thể",
+    "explanation": "Trong hộp không có bi vàng."
+  },
+  {
+    "id": "OCEAN_018",
+    "land": "ocean",
+    "topic": "Không gian mẫu",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Gieo ba đồng xu cân đối. Không gian mẫu có bao nhiêu phần tử?",
+    "options": [
+      "3",
+      "6",
+      "8",
+      "9"
+    ],
+    "answer": "8",
+    "explanation": "2 · 2 · 2 = 8."
+  },
+  {
+    "id": "OCEAN_019",
+    "land": "ocean",
+    "topic": "Biến cố",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Gieo ba đồng xu cân đối. Biến cố ‘có đúng hai đồng xu ngửa’ gồm bao nhiêu kết quả?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "3",
+    "explanation": "NNS, NSN, SNN."
+  },
+  {
+    "id": "OCEAN_020",
+    "land": "ocean",
+    "topic": "Biến cố",
+    "level": "comprehension",
+    "type": "multiple_choice",
+    "question": "Chọn ngẫu nhiên một số từ tập {1, 2, …, 20}. Biến cố ‘số được chọn chia hết cho 5’ gồm bao nhiêu kết quả?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "4",
+    "explanation": "Gồm 5, 10, 15, 20."
+  },
+  {
+    "id": "OCEAN_021",
+    "land": "ocean",
+    "topic": "Biến cố",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Gieo hai đồng xu cân đối. Biến cố ‘có ít nhất một đồng xu sấp’ gồm bao nhiêu kết quả?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "3",
+    "explanation": "Gồm SS, SN, NS (chỉ NN không thỏa mãn)."
+  },
+  {
+    "id": "OCEAN_022",
+    "land": "ocean",
+    "topic": "Biến cố",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Hộp có 4 viên bi khác màu: đỏ, xanh, vàng, trắng. Lấy ngẫu nhiên một viên. Biến cố ‘không lấy được bi đỏ’ gồm bao nhiêu kết quả?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "3",
+    "explanation": "Gồm xanh, vàng, trắng."
+  },
+  {
+    "id": "OCEAN_023",
+    "land": "ocean",
+    "topic": "Biến cố",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Gieo một con xúc xắc hai lần. Biến cố ‘tổng số chấm của hai lần gieo không nhỏ hơn 10’ gồm bao nhiêu kết quả?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": "6",
+    "explanation": "(4,6), (5,5), (6,4), (5,6), (6,5), (6,6)."
+  },
+  {
+    "id": "OCEAN_024",
+    "land": "ocean",
+    "topic": "Không gian mẫu",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Một tổ có 4 bạn nam và 3 bạn nữ. Chọn ngẫu nhiên một bạn làm tổ trưởng. Không gian mẫu có bao nhiêu phần tử?",
+    "options": [
+      "3",
+      "4",
+      "7",
+      "12"
+    ],
+    "answer": "7",
+    "explanation": "Có 4 + 3 = 7 cách chọn."
+  },
+  {
+    "id": "OCEAN_025",
+    "land": "ocean",
+    "topic": "Biến cố",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Một tổ có 4 bạn nam và 3 bạn nữ. Chọn ngẫu nhiên một bạn. Biến cố ‘chọn được bạn nữ’ gồm bao nhiêu kết quả?",
+    "options": [
+      "3",
+      "4",
+      "7",
+      "12"
+    ],
+    "answer": "3",
+    "explanation": "Có 3 bạn nữ nên có 3 kết quả thuận lợi."
+  },
+  {
+    "id": "OCEAN_026",
+    "land": "ocean",
+    "topic": "Không gian mẫu",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Chọn ngẫu nhiên một số tự nhiên có hai chữ số. Không gian mẫu có bao nhiêu phần tử?",
+    "options": [
+      "89",
+      "90",
+      "99",
+      "100"
+    ],
+    "answer": "90",
+    "explanation": "Các số từ 10 đến 99: 99 − 10 + 1 = 90."
+  },
+  {
+    "id": "OCEAN_027",
+    "land": "ocean",
+    "topic": "Biến cố",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Gieo hai con xúc xắc. Biến cố ‘số chấm hai con xúc xắc bằng nhau’ gồm bao nhiêu kết quả?",
+    "options": [
+      "3",
+      "6",
+      "12",
+      "36"
+    ],
+    "answer": "6",
+    "explanation": "(1,1), (2,2), (3,3), (4,4), (5,5), (6,6)."
+  },
+  {
+    "id": "OCEAN_028",
+    "land": "ocean",
+    "topic": "Không gian mẫu",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Xếp ngẫu nhiên 3 bạn A, B, C thành một hàng ngang. Không gian mẫu có bao nhiêu phần tử?",
+    "options": [
+      "3",
+      "6",
+      "9",
+      "27"
+    ],
+    "answer": "6",
+    "explanation": "Số hoán vị của 3 phần tử là 3! = 6."
+  },
+  {
+    "id": "OCEAN_029",
+    "land": "ocean",
+    "topic": "Biến cố",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Rút ngẫu nhiên một lá bài từ bộ bài tây 52 lá. Biến cố ‘rút được lá cơ’ gồm bao nhiêu kết quả?",
+    "options": [
+      "4",
+      "13",
+      "26",
+      "52"
+    ],
+    "answer": "13",
+    "explanation": "Mỗi chất (cơ, rô, chuồn, bích) có 13 lá."
+  },
+  {
+    "id": "OCEAN_030",
+    "land": "ocean",
+    "topic": "Biến cố",
+    "level": "application",
+    "type": "multiple_choice",
+    "question": "Gieo hai con xúc xắc. Biến cố ‘tích số chấm là số lẻ’ gồm bao nhiêu kết quả?",
+    "options": [
+      "6",
+      "9",
+      "12",
+      "18"
+    ],
+    "answer": "9",
+    "explanation": "Tích lẻ khi cả hai số đều lẻ: 3 · 3 = 9 kết quả (mỗi con có 3 mặt lẻ: 1, 3, 5)."
+  }
+]
